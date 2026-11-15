@@ -3,702 +3,490 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SUMMUS — Завод гофрированных труб и комплектующих | SN 8 и Дренаж</title>
-  <meta name="description" content="Завод-производитель гофрированных двухслойных труб SN8 и перфорированных дренажных систем Ø 110–630 мм. Первичное сырье, сертификат СТ-KZ, прямые цены с НДС 16%." />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230B1018' stroke='%234A5A70' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='19' fill='%2305080D' stroke='%2329A8FF' stroke-width='5.5'/%3E%3C/svg%3E" />
+  <title>SUMMUS — Завод гофрированных труб и фитингов</title>
+  <meta name="description" content="SUMMUS — Завод гофрированных труб и фитингов. Двухслойные трубы SN 8, перфорированные дренажные трубы Ø 110–630 мм и комплектующие. Городской склад, самовывоз, ЭДО и доставка." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23181C22'/%3E%3Ccircle cx='32' cy='32' r='19' fill='%23F9FAFC' stroke='%234BA3E3' stroke-width='6'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add('js-ready');</script>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
 
-  <!-- =====================================================================
-       Minimalist Sticky Header — Only the Essentials
-       ===================================================================== -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="#top" class="brand-lockup" aria-label="SUMMUS — Завод гофрированных труб">
-        <img src="./assets/logo-summus-dark.png" alt="SUMMUS" class="brand-logo" />
-      </a>
-
-      <nav class="main-nav" id="mainNav" aria-label="Навигация">
-        <a href="#catalog" class="nav-link">Каталог и цены</a>
-        <a href="#factory" class="nav-link">Производство</a>
-        <a href="#contact" class="nav-link">Контакты</a>
-      </nav>
-
-      <div class="header-right">
-        <a href="#calculator" class="btn btn-glow btn-sm">
-          Рассчитать КП
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-        <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Меню" aria-expanded="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+  <!-- Subtle Floating Quick Navigation Pill -->
+  <div class="top-nav-wrap">
+    <nav class="top-nav-pill" aria-label="Быстрая навигация">
+      <a href="#advantages" class="pill-link">Преимущества</a>
+      <a href="#catalog" class="pill-link">Каталог</a>
+      <a href="#cooperation" class="pill-link">Сотрудничество</a>
+      <a href="#orderSection" class="pill-cta">Заказать / КП</a>
+    </nav>
+  </div>
 
   <main id="top">
     <!-- ===================================================================
-         1. Creative Hero Screen — Moving 3D Corrugated Pipes Stage
+         1. Centered Hero Monument: SUMMUS Pipe Logo + Factory Subtitle
          =================================================================== -->
-    <section class="hero cyber-grid">
-      <div class="hero-orb-1"></div>
-      <div class="hero-orb-2"></div>
-
+    <header class="hero-monument">
       <div class="container">
-        <div class="hero-grid">
-          <!-- Left: High-Trust Manufacturer Statement -->
-          <div class="hero-copy reveal">
-            <div class="status-pill">
-              <span class="pulse-dot"></span>
-              <span>ЗАВОД-ПРОИЗВОДИТЕЛЬ В РК • 100% ПЕРВИЧНОЕ СЫРЬЕ</span>
+        <div class="hero-logo-stage reveal">
+          <img
+            src="./assets/logo-summus-transparent.png"
+            alt="SUMMUS — Завод гофрированных труб и фитингов"
+            class="hero-logo-img"
+          />
+        </div>
+        <h1 class="hero-factory-subtitle reveal">
+          ЗАВОД ГОФРИРОВАННЫХ ТРУБ И ФИТИНГОВ
+        </h1>
+      </div>
+    </header>
+
+    <!-- Full-Width 3D Horizontal Corrugated Pipe Divider -->
+    <div class="pipe-divider-full" aria-hidden="true"></div>
+
+    <!-- ===================================================================
+         2. Section: «Ключевые Преимущества и Услуги»
+            3x2 Studio White Cards Grid with Realistic Studio Photographs
+         =================================================================== -->
+    <section id="advantages" class="advantages-section">
+      <div class="container">
+        <h2 class="section-heading-center reveal">
+          Ключевые Преимущества и Услуги
+        </h2>
+
+        <div class="advantages-grid">
+          <!-- Card 1: Широкий Ассортимент Труб (Realistic U-Pipe Studio Photo) -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-real-1-assortment.jpg" alt="Широкий ассортимент гофрированных труб" loading="lazy" />
             </div>
+            <h3 class="adv-title">Широкий<br/>Ассортимент Труб</h3>
+            <p class="adv-sub">Канализационные и дренажные<br/>трубы Ø 110–1000 мм</p>
+          </article>
 
-            <h1 class="hero-title">
-              Гофрированные трубы, с&nbsp;которыми <span class="text-gradient">технадзор проходят</span> с&nbsp;первого раза
-            </h1>
-
-            <p class="hero-lead">
-              Завод <strong>SUMMUS</strong> выпускает двухслойные канализационные трубы <strong>SN&nbsp;8</strong> и&nbsp;перфорированные <strong>дренажные системы Ø&nbsp;110–630&nbsp;мм</strong>. Без переплавленного вторсырья, с&nbsp;полным пакетом документов (<strong>СТ-KZ</strong>, паспорта и&nbsp;протоколы лаборатории).
-            </p>
-
-            <div class="hero-actions">
-              <a href="#catalog" class="btn btn-glow">
-                Прайс-лист и размеры с НДС
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
-              <a href="#factory" class="btn btn-glass">
-                Экскурсия на завод
-              </a>
+          <!-- Card 2: Городской Склад и Самовывоз (Realistic Warehouse with Pipes Photo) -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-theme-warehouse.jpg" alt="Городской склад и самовывоз" loading="lazy" />
             </div>
+            <h3 class="adv-title">Городской Склад<br/>и Самовывоз</h3>
+            <p class="adv-sub">Постоянный запас в наличии<br/>и быстрая погрузка</p>
+          </article>
 
-            <div class="hero-trust-row">
-              <div class="hero-trust-item">
-                <strong>Ø 110–630</strong>
-                <span>Полная линейка в отрезках по 6 м</span>
-              </div>
-              <div class="hero-trust-item">
-                <strong>SN 8 кН/м²</strong>
-                <span>Укладка в грунт на глубину до 8 метров</span>
-              </div>
-              <div class="hero-trust-item">
-                <strong>1 + 2 ЗИП</strong>
-                <span>Муфта и 2 кольца EPDM сразу в комплекте</span>
-              </div>
+          <!-- Card 3: Оперативная Доставка (Realistic Cargo Truck Loaded with Pipes Photo) -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-theme-delivery.jpg" alt="Оперативная доставка грузовым транспортом" loading="lazy" />
             </div>
-          </div>
+            <h3 class="adv-title">Оперативная<br/>Доставка</h3>
+            <p class="adv-sub">Доставка спецтранспортом<br/>на объекты по Казахстану</p>
+          </article>
 
-          <!-- Right: Interactive 60fps Moving 3D Corrugated Pipes Canvas -->
-          <div class="kinetic-stage reveal" id="kineticStage">
-            <div class="stage-hud-top">
-              <span class="hud-tag" id="stageHudMode">РЕЖИМ: ПОТОК SN8 • Ø110–630</span>
-              <span class="hud-tag">PE-HD DUAL WALL</span>
+          <!-- Card 4: Полная Комплектация Фитингами (Realistic Curved Pipe Bends Photo) -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-real-4-fittings.jpg" alt="Полная комплектация фитингами и отводами" loading="lazy" />
             </div>
+            <h3 class="adv-title">Полная Комплектация<br/>Фитингами</h3>
+            <p class="adv-sub">Муфты, отводы, тройники,<br/>крестовины и переходы</p>
+          </article>
 
-            <canvas id="heroPipeCanvas" aria-label="Интерактивная 3D анимация гофрированных труб SUMMUS"></canvas>
-
-            <div class="stage-controls">
-              <div class="stage-mode-pills" role="group" aria-label="Режим демонстрации труб">
-                <button type="button" class="mode-pill is-active" data-hero-mode="flow">Поток SN8</button>
-                <button type="button" class="mode-pill" data-hero-mode="coupling">Стыковка муфты</button>
-                <button type="button" class="mode-pill" data-hero-mode="drainage">Дренаж 360°</button>
-              </div>
-              <span class="stage-hint">Двигайте курсор • Клик — импульс</span>
+          <!-- Card 5: Электронный Документооборот (ЭДО) (Realistic Laptop & Contracts Photo) -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-theme-edo.jpg" alt="Электронный документооборот ЭДО и договоры" loading="lazy" />
             </div>
-          </div>
+            <h3 class="adv-title">Электронный<br/>Документооборот (ЭДО)</h3>
+            <p class="adv-sub">Официальный договор, ЭСФ<br/>и гибкая отсрочка оплаты</p>
+          </article>
+
+          <!-- Card 6: Гарантия Качества Производителя (Realistic Quality Control Photo) -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-theme-quality.jpg" alt="Гарантия качества производителя" loading="lazy" />
+            </div>
+            <h3 class="adv-title">Гарантия Качества<br/>Производителя</h3>
+            <p class="adv-sub">Заводской контроль жесткости<br/>SN 8 и соответствие ГОСТ</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Kinetic Rolling Corrugated Ribbon -->
-    <div class="corrugated-ribbon" aria-hidden="true">
-      <div class="ribbon-track">
-        <span class="ribbon-item"><i></i> ПРЯМЫЕ ПОСТАВКИ С ЗАВОДА SUMMUS</span>
-        <span class="ribbon-item"><i></i> ДВУХСЛОЙНЫЕ ТРУБЫ КЛАССА SN 8</span>
-        <span class="ribbon-item"><i></i> ДРЕНАЖНЫЕ ПЕРФОРИРОВАННЫЕ ТРУБЫ L–6М</span>
-        <span class="ribbon-item"><i></i> ПЕРВИЧНЫЙ ГРАНУЛЯТ БЕЗ ВТОРСЫРЬЯ</span>
-        <span class="ribbon-item"><i></i> СЕРТИФИКАТ СТ-KZ И ПРОТОКОЛЫ ОТК</span>
-        <span class="ribbon-item"><i></i> ЦЕНЫ С УЧЕТОМ НДС 16%</span>
-        <!-- Duplicate for seamless infinite loop -->
-        <span class="ribbon-item"><i></i> ПРЯМЫЕ ПОСТАВКИ С ЗАВОДА SUMMUS</span>
-        <span class="ribbon-item"><i></i> ДВУХСЛОЙНЫЕ ТРУБЫ КЛАССА SN 8</span>
-        <span class="ribbon-item"><i></i> ДРЕНАЖНЫЕ ПЕРФОРИРОВАННЫЕ ТРУБЫ L–6М</span>
-        <span class="ribbon-item"><i></i> ПЕРВИЧНЫЙ ГРАНУЛЯТ БЕЗ ВТОРСЫРЬЯ</span>
-        <span class="ribbon-item"><i></i> СЕРТИФИКАТ СТ-KZ И ПРОТОКОЛЫ ОТК</span>
-        <span class="ribbon-item"><i></i> ЦЕНЫ С УЧЕТОМ НДС 16%</span>
+    <!-- ===================================================================
+         Split 3D Corrugated Pipe Divider with Centered «Каталог»
+         =================================================================== -->
+    <div class="pipe-divider-split" id="catalog">
+      <div class="pipe-arm pipe-arm-left" aria-hidden="true">
+        <div class="pipe-arm-body"></div>
+        <img src="./assets/pipe-cap-right.png" alt="" class="pipe-arm-cap" />
+      </div>
+
+      <h2 class="split-heading">Каталог</h2>
+
+      <div class="pipe-arm pipe-arm-right" aria-hidden="true">
+        <img src="./assets/pipe-cap-left.png" alt="" class="pipe-arm-cap" />
+        <div class="pipe-arm-body"></div>
       </div>
     </div>
 
     <!-- ===================================================================
-         2. Каталог продукции + Заводской Прайс-Лист и CAD-Сканер
+         3. Section: «Каталог»
+            Main Studio Category Cards + Minimalist Product Cards Grid
+            (Only Photo, Name, Size & «Подробнее» Button on each Card!)
          =================================================================== -->
-    <section class="section cyber-grid" id="catalog">
+    <section class="catalog-section">
       <div class="container">
-        <div class="section-head reveal">
-          <div class="section-head-left">
-            <span class="eyebrow">Серийная продукция и цены завода</span>
-            <h2 class="section-title">Каталог гофрированных труб и комплектующих</h2>
-            <p class="section-sub">
-              Производим трубы для наружной канализации, ливневых коллекторов, дорожного дренажа и защиты кабеля. Все позиции отгружаются с полным комплектом соединительных элементов.
-            </p>
-          </div>
-        </div>
-
-        <!-- 3 Dark Studio Spotlight Cards -->
-        <div class="products-grid">
-          <article class="spotlight-card prod-card reveal">
-            <div class="prod-media">
-              <img src="./assets/pipe-sn8-dark.jpg" alt="Двухслойная гофрированная труба SUMMUS SN8 в разрезе с муфтой и кольцами" loading="lazy" />
-              <span class="prod-chip">SN 8 • КАНАЛИЗАЦИЯ И ЛИВНЕВКА</span>
+        <!-- Two Main Studio Category Cards from Client Reference Photo -->
+        <div class="catalog-showcase-grid">
+          <!-- Left Card: ГОФРИРОВАННЫЕ ТРУБЫ -->
+          <article class="cat-showcase-card reveal">
+            <div class="cat-showcase-media" data-open-series-modal="sn8">
+              <img
+                src="./assets/catalog-pipes-coils.jpg"
+                alt="Гофрированные трубы SUMMUS"
+              />
             </div>
-            <div class="prod-body">
-              <h3>Двухслойные трубы SN 8</h3>
-              <p>Наружный черный гофр держит нагрузку грунта и магистралей, гладкий голубой внутренний слой исключает заиливание и упрощает видеодиагностику.</p>
-              <div class="prod-meta">
-                <div class="prod-meta-row"><span>Диаметры (OD/ID)</span><span class="mono">110/91 — 630/541 мм</span></div>
-                <div class="prod-meta-row"><span>Комплектация 6 м</span><span class="mono">1 муфта + 2 кольца</span></div>
-                <div class="prod-meta-row"><span>Цена с НДС 16%</span><span class="mono">от 1 050 ₸ / п.м</span></div>
-              </div>
-              <a href="#priceMatrix" class="btn btn-glass btn-sm" data-open-tab="sn8">Смотреть размеры SN 8</a>
-            </div>
+            <h3 class="cat-showcase-title">ГОФРИРОВАННЫЕ ТРУБЫ</h3>
+            <button type="button" class="pipe-cta-btn" data-open-series-modal="sn8">
+              <span>ПЕРЕЙТИ В КАТАЛОГ</span>
+            </button>
           </article>
 
-          <article class="spotlight-card prod-card reveal">
-            <div class="prod-media">
-              <img src="./assets/pipe-drainage-dark.jpg" alt="Перфорированная дренажная труба SUMMUS с синей полосой" loading="lazy" />
-              <span class="prod-chip">ПЕРФОРАЦИЯ • ДРЕНАЖ L–6М</span>
+          <!-- Right Card: ФИТИНГИ К НИМ -->
+          <article class="cat-showcase-card reveal">
+            <div class="cat-showcase-media" data-open-series-modal="fittings">
+              <img
+                src="./assets/catalog-fittings-group.jpg"
+                alt="Фитинги к гофрированным трубам SUMMUS"
+              />
             </div>
-            <div class="prod-body">
-              <h3>Дренажные трубы (перф.)</h3>
-              <p>Калиброванные водоприемные щели внутри впадин гофры быстро собирают грунтовые и талые воды, сохраняя кольцевую прочность трубы на глубине.</p>
-              <div class="prod-meta">
-                <div class="prod-meta-row"><span>Диаметры</span><span class="mono">Ø 110 — 630 мм</span></div>
-                <div class="prod-meta-row"><span>Формат поставки</span><span class="mono">Штанги L = 6 м</span></div>
-                <div class="prod-meta-row"><span>Цена с НДС 16%</span><span class="mono">от 1 500 ₸ / п.м</span></div>
-              </div>
-              <a href="#priceMatrix" class="btn btn-glass btn-sm" data-open-tab="drainage">Смотреть прайс дренажа</a>
-            </div>
-          </article>
-
-          <article class="spotlight-card prod-card reveal">
-            <div class="prod-media">
-              <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Комплектующие и фитинги SUMMUS">
-                <defs>
-                  <radialGradient id="dkSpot" cx="50%" cy="50%" r="60%">
-                    <stop offset="0%" stop-color="#15243A"/>
-                    <stop offset="100%" stop-color="#070B12"/>
-                  </radialGradient>
-                  <linearGradient id="carb" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#3C4A5E"/>
-                    <stop offset="50%" stop-color="#1B2330"/>
-                    <stop offset="100%" stop-color="#0D1219"/>
-                  </linearGradient>
-                </defs>
-                <rect width="480" height="360" fill="url(#dkSpot)"/>
-                <!-- Tee Fitting -->
-                <rect x="64" y="92" width="146" height="68" rx="8" fill="url(#carb)" stroke="#556782"/>
-                <rect x="105" y="148" width="64" height="86" rx="8" fill="url(#carb)" stroke="#556782"/>
-                <rect x="62" y="99" width="6" height="54" rx="2" fill="#29A8FF"/>
-                <rect x="206" y="99" width="6" height="54" rx="2" fill="#29A8FF"/>
-                <rect x="112" y="230" width="50" height="6" rx="2" fill="#29A8FF"/>
-                <!-- 90 Elbow -->
-                <path d="M 274 92 H 352 A 54 54 0 0 1 406 146 V 204 H 344 V 154 H 274 Z" fill="url(#carb)" stroke="#556782"/>
-                <rect x="270" y="98" width="6" height="50" rx="2" fill="#29A8FF"/>
-                <rect x="350" y="200" width="50" height="6" rx="2" fill="#29A8FF"/>
-                <!-- Glowing EPDM Rings -->
-                <ellipse cx="294" cy="272" rx="44" ry="19" fill="none" stroke="#232E3E" stroke-width="11"/>
-                <ellipse cx="294" cy="272" rx="44" ry="19" fill="none" stroke="#00E0FF" stroke-width="1.8"/>
-                <ellipse cx="368" cy="284" rx="44" ry="19" fill="none" stroke="#232E3E" stroke-width="11"/>
-                <ellipse cx="368" cy="284" rx="44" ry="19" fill="none" stroke="#47B2FF" stroke-width="1.8"/>
-                <text x="240" y="338" text-anchor="middle" fill="#7D92B0" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600">МУФТЫ • КОЛЬЦА EPDM • ОТВОДЫ • ТРОЙНИКИ</text>
-              </svg>
-              <span class="prod-chip">ФАСОННЫЕ ИЗДЕЛИЯ И EPDM</span>
-            </div>
-            <div class="prod-body">
-              <h3>Муфты, фитинги и колодцы</h3>
-              <p>Соединительные муфты, двухлепестковые кольца EPDM, отводы 45°/90°, тройники, переходы на другие типы труб и сварные полимерные колодцы.</p>
-              <div class="prod-meta">
-                <div class="prod-meta-row"><span>Муфта + 2 кольца</span><span class="mono">Включены в цену SN8</span></div>
-                <div class="prod-meta-row"><span>Герметичность стыка</span><span class="mono">до 0.5 бар</span></div>
-                <div class="prod-meta-row"><span>Наличие на складе</span><span class="mono">Под полную трассу</span></div>
-              </div>
-              <a href="#contact" class="btn btn-glass btn-sm">Подобрать по проекту</a>
-            </div>
+            <h3 class="cat-showcase-title">ФИТИНГИ К НИМ</h3>
+            <button type="button" class="pipe-cta-btn" data-open-series-modal="fittings">
+              <span>ПЕРЕЙТИ В КАТАЛОГ</span>
+            </button>
           </article>
         </div>
 
-        <!-- Official Interactive Size & Price Matrix -->
-        <div id="priceMatrix" class="reveal">
-          <div class="catalog-bar">
-            <div class="seg-control" role="tablist">
-              <button type="button" class="seg-btn is-active" data-catalog-tab="sn8">Двухслойные SN 8</button>
-              <button type="button" class="seg-btn" data-catalog-tab="drainage">Дренажные (L–6 м)</button>
-              <button type="button" class="seg-btn" data-catalog-tab="compare">Сравнить обе серии</button>
-            </div>
-
-            <div class="vat-badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <span>Официальные цены завода в тенге (₸) с НДС 16% за 1 метр</span>
-            </div>
-          </div>
-
-          <div class="catalog-layout">
-            <div class="matrix-card">
-              <div class="matrix-top">
-                <span class="matrix-top-title" id="tableBannerTitle">Двухслойные гофрированные трубы SN 8</span>
-                <span class="kit-tag" id="tableBannerKit">Отрезки по 6 м • В комплекте 1 муфта и 2 кольца EPDM</span>
-              </div>
-              <div class="table-wrap">
-                <table class="price-table" aria-label="Прайс-лист и таблица размеров SUMMUS">
-                  <thead id="catalogThead"></thead>
-                  <tbody id="catalogTbody"></tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- Live Proportional Neon-CAD Scanner -->
-            <aside class="cad-scanner" aria-live="polite">
-              <div class="cad-head">
-                <span>CAD-СКАНЕР ПРОФИЛЯ</span>
-                <span>OD / ID REAL SCALE</span>
-              </div>
-
-              <div class="cad-viewport">
-                <svg class="cad-svg" id="cadCrossSvg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"></svg>
-              </div>
-
-              <h3 class="cad-title" id="cadTitle">SUMMUS SN 8 — Ø 315/271</h3>
-              <p class="cad-sub" id="cadSub">Двухслойная труба ПНД • Муфта + 2 кольца</p>
-
-              <div class="cad-grid">
-                <div class="cad-box">
-                  <span>Наружный Ø</span>
-                  <strong id="cadStatOd">315 мм</strong>
-                </div>
-                <div class="cad-box">
-                  <span>Внутренний Ø</span>
-                  <strong class="cyan" id="cadStatId">271 мм</strong>
-                </div>
-                <div class="cad-box">
-                  <span>Высота гофры</span>
-                  <strong id="cadStatWall">22.0 мм</strong>
-                </div>
-                <div class="cad-box">
-                  <span>Цена с НДС</span>
-                  <strong class="cyan" id="cadStatPriceM">6 600 ₸</strong>
-                </div>
-              </div>
-
-              <div class="cad-note" id="cadKitNote"></div>
-
-              <button type="button" class="btn btn-glow" style="width:100%" id="cadAddSpecBtn">
-                + Добавить в расчет (30 п/м)
+        <!-- Minimalist Catalog Product Cards Grid -->
+        <div class="catalog-cards-block" id="catalogCardsAnchor">
+          <div class="spec-toolbar reveal">
+            <div class="tab-group" role="tablist" aria-label="Разделы каталога">
+              <button type="button" class="tab-btn is-active" data-cat-filter="all">
+                Все позиции (22)
               </button>
-            </aside>
+              <button type="button" class="tab-btn" data-cat-filter="sn8">
+                Гофрированные трубы SN 8 (8)
+              </button>
+              <button type="button" class="tab-btn" data-cat-filter="drainage">
+                Дренажные трубы L–6 м (8)
+              </button>
+              <button type="button" class="tab-btn" data-cat-filter="fittings">
+                Фитинги к ним (6)
+              </button>
+            </div>
+
+            <div class="toolbar-right-group">
+              <button type="button" class="table-open-btn" id="openFullPriceModalBtn">
+                Сводный прайс-лист (таблица)
+              </button>
+            </div>
           </div>
+
+          <!-- Minimalist Product Cards Grid (Only Photo, Name, Size & «Подробнее») -->
+          <div class="product-cards-grid" id="productCardsGrid" aria-live="polite"></div>
+        </div>
+
+        <!-- Bottom Pipe Loop Motif from Client Reference Photo -->
+        <div class="pipe-loop-accent" aria-hidden="true">
+          <img src="./assets/icon-pipe-u.png" alt="" />
         </div>
       </div>
     </section>
 
+    <!-- Full-Width 3D Horizontal Corrugated Pipe Divider -->
+    <div class="pipe-divider-full" aria-hidden="true"></div>
+
     <!-- ===================================================================
-         3. «Закопал и забыл» — Технадзор & Инженерное сравнение (KazUnion Structure)
+         4. NEW SECTION: «Преимущества Сотрудничества с Заводом SUMMUS»
          =================================================================== -->
-    <section class="section quality-section" id="advantages">
+    <section id="cooperation" class="cooperation-section">
       <div class="container">
-        <div class="section-head reveal">
-          <div class="section-head-left">
-            <span class="eyebrow">Принцип «Закопал и забыл на 50 лет»</span>
-            <h2 class="section-title">Почему строители выбирают завод SUMMUS вместо дешевых аналогов</h2>
-            <p class="section-sub">
-              Переделка просевшей траншеи обходится в 10 раз дороже экономии на трубе. Мы производим продукцию строго из первичного трубного полиэтилена, которая сдает любой технадзор без замечаний.
+        <h2 class="section-heading-center reveal">
+          Преимущества Сотрудничества с Нами
+        </h2>
+        <p class="section-sub-center reveal">
+          Надежные поставки для строительных компаний, подрядчиков, дилеров и коммунальных предприятий по всему Казахстану
+        </p>
+
+        <div class="coop-grid">
+          <article class="coop-card reveal">
+            <div class="coop-top">
+              <span class="coop-num mono">01</span>
+              <span class="coop-tag">Завод-производитель</span>
+            </div>
+            <h3 class="coop-title">Прямые заводские цены с НДС 16%</h3>
+            <p class="coop-desc">
+              Поставляем продукцию напрямую с производственной линии без посредников. Фиксируем стоимость партии в спецификации и коммерческом предложении.
             </p>
-          </div>
-        </div>
+          </article>
 
-        <div class="vs-grid reveal">
-          <!-- SUMMUS Virgin HDPE -->
-          <div class="vs-card is-summus">
-            <span class="vs-pill">✓ ЗАВОДСКОЙ СТАНДАРТ SUMMUS</span>
-            <h3>100% первичное сырье и честный SN 8</h3>
-            <ul class="vs-list">
-              <li>
-                <svg class="vs-icon-ok" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
-                <span><strong>Первичный гранулят высокой плотности:</strong> стенка эластичная и ударопрочная, без раковин, пузырей и постороннего запаха переплавленного пластика.</span>
-              </li>
-              <li>
-                <svg class="vs-icon-ok" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
-                <span><strong>Быстрая приемка технадзором:</strong> гладкий контрастный голубой слой внутри идеально просматривается камерой телеинспекции на всей длине трассы.</span>
-              </li>
-              <li>
-                <svg class="vs-icon-ok" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
-                <span><strong>Геометрия под уплотнитель EPDM:</strong> калиброванный шаг гофры исключает протечки грунтовых вод в стыках.</span>
-              </li>
-              <li>
-                <svg class="vs-icon-ok" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
-                <span><strong>ЗИП уже включен в стоимость:</strong> 1 муфта и 2 кольца идут к каждой 6-метровой трубе SN8 без скрытых наценок в счете.</span>
-              </li>
-            </ul>
-          </div>
+          <article class="coop-card reveal">
+            <div class="coop-top">
+              <span class="coop-num mono">02</span>
+              <span class="coop-tag">Готовый монтаж</span>
+            </div>
+            <h3 class="coop-title">Полная комплектация каждого отрезка</h3>
+            <p class="coop-desc">
+              Каждая 6-метровая труба SN 8 поставляется сразу в комплекте с 1 соединительной муфтой и 2 профильными уплотнительными кольцами EPDM.
+            </p>
+          </article>
 
-          <!-- Cheap Recycled Pipes Risk -->
-          <div class="vs-card is-cheap">
-            <span class="vs-pill">✕ РИСКИ ВТОРИЧНОГО СЫРЬЯ</span>
-            <h3>Чем опасны кустарные трубы с вторсырьем</h3>
-            <ul class="vs-list">
-              <li>
-                <svg class="vs-icon-bad" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span>Хрупкость при минусовых температурах — растрескивание раструбов и ребер прямо при разгрузке или трамбовке пазух траншеи.</span>
-              </li>
-              <li>
-                <svg class="vs-icon-bad" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span>Фактическая жесткость SN 4–6 под видом SN 8 приводит к овальности и смятию трубы под дорогой через 1–2 сезона.</span>
-              </li>
-              <li>
-                <svg class="vs-icon-bad" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span>Шероховатая вздутая внутренняя стенка и расслоение слоев — отказ технадзора при сдаче исполнительной документации.</span>
-              </li>
-              <li>
-                <svg class="vs-icon-bad" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span>Муфты и резинки выставляются отдельной строкой, увеличивая итоговую смету на 15–22%.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+          <article class="coop-card reveal">
+            <div class="coop-top">
+              <span class="coop-num mono">03</span>
+              <span class="coop-tag">Без простоев</span>
+            </div>
+            <h3 class="coop-title">Складской запас и отгрузка в день заказа</h3>
+            <p class="coop-desc">
+              Поддерживаем постоянное наличие ходовых диаметров от Ø 110 до Ø 630 мм на городском складе для быстрого самовывоза или отправки на объект.
+            </p>
+          </article>
 
-        <!-- Interactive 3-Mode Cutaway Simulator -->
-        <div class="sim-wrapper reveal">
-          <div>
-            <div class="sim-tabs" role="tablist">
-              <button type="button" class="sim-tab is-active" data-eng-tab="wall">1. Двухслойная стенка SN 8</button>
-              <button type="button" class="sim-tab" data-eng-tab="coupling">2. Муфта + 2 кольца (Ø110–400)</button>
-              <button type="button" class="sim-tab" data-eng-tab="bell">3. Раструб (Ø500–630)</button>
+          <article class="coop-card reveal">
+            <div class="coop-top">
+              <span class="coop-num mono">04</span>
+              <span class="coop-tag">Бухгалтерия и ЭДО</span>
             </div>
-            <div class="sim-stage" id="engSvgViewport"></div>
-          </div>
+            <h3 class="coop-title">Прозрачный ЭДО и гибкие условия оплаты</h3>
+            <p class="coop-desc">
+              Оперативно выставляем счета, оформляем ЭСФ и СНТ через электронный документооборот. Предусмотрена отсрочка платежа для постоянных партнеров.
+            </p>
+          </article>
 
-          <div class="sim-points">
-            <div class="sim-point is-active" data-eng-card="wall">
-              <h4>Монолитная молекулярная соэкструзия</h4>
-              <p>Наружный гофр и внутренняя стенка формуются одновременно при 220°C, образуя неразъемную конструкцию с кольцевой жесткостью ≥ 8 кН/м².</p>
+          <article class="coop-card reveal">
+            <div class="coop-top">
+              <span class="coop-num mono">05</span>
+              <span class="coop-tag">Лабораторный контроль</span>
             </div>
-            <div class="sim-point" data-eng-card="coupling">
-              <h4>Двойной контур герметизации EPDM</h4>
-              <p>Уплотнительные кольца устанавливаются в пазы гофры с обеих сторон стыка и обжимаются муфтой, защищая сеть от грунтовых вод и прорастания корней.</p>
+            <h3 class="coop-title">Сертификаты и паспорт качества на партию</h3>
+            <p class="coop-desc">
+              Трубы производятся из первичного полиэтилена высокой плотности PE-HD со строгим контролем кольцевой жесткости SN 8 (≥ 8 кН/м²) и сроком службы 50+ лет.
+            </p>
+          </article>
+
+          <article class="coop-card reveal">
+            <div class="coop-top">
+              <span class="coop-num mono">06</span>
+              <span class="coop-tag">Инженерная поддержка</span>
             </div>
-            <div class="sim-point" data-eng-card="bell">
-              <h4>Усиленный заводской раструб больших диаметров</h4>
-              <p>Для труб 500/431 и 630/541 мм раструб интегрирован в тело трубы, ускоряя монтаж магистральных коллекторов в полевых условиях.</p>
-            </div>
-          </div>
+            <h3 class="coop-title">Комплектация объектов «под ключ»</h3>
+            <p class="coop-desc">
+              Помогаем рассчитать точное количество отрезков по 6 м и подобрать все необходимые фитинги: отводы 45°/90°, тройники, крестовины и переходы.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ===================================================================
-         4. Производство, Лаборатория, Экскурсия и Сертификаты СТ-KZ (#factory)
-         =================================================================== -->
-    <section class="section cyber-grid" id="factory">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="section-head-left">
-            <span class="eyebrow">Производственный комплекс и ОТК</span>
-            <h2 class="section-title">Собственный завод, лаборатория и полный пакет документов</h2>
-            <p class="section-sub">
-              От входного контроля индекса расплава гранул до крытого хранения готовой продукции — каждая партия проходит проверку и сопровождается официальной документацией для сдачи объекта.
-            </p>
-          </div>
-        </div>
-
-        <div class="factory-grid reveal">
-          <div class="spotlight-card step-card">
-            <span class="step-num">01 / ОБОРУДОВАНИЕ</span>
-            <h4>Автоматизированная соэкструзия</h4>
-            <p>Современные высокоскоростные линии с вакуумным гофратором обеспечивают идеальную соосность, толщину стенки и стабильный шаг волны.</p>
-          </div>
-          <div class="spotlight-card step-card">
-            <span class="step-num">02 / ЛАБОРАТОРИЯ ОТК</span>
-            <h4>Испытание каждой партии</h4>
-            <p>Проверяем образцы на кольцевую жесткость SN 8 (ISO 9969), ударную прочность при 0°C и стойкость сварного шва слоев на разрыв.</p>
-          </div>
-          <div class="spotlight-card step-card">
-            <span class="step-num">03 / ПРАВИЛЬНОЕ ХРАНЕНИЕ</span>
-            <h4>Защита от ультрафиолета</h4>
-            <p>Соблюдаем регламент паллетирования и хранения труб и резиновых колец EPDM, чтобы полимер не терял эластичность до укладки в грунт.</p>
-          </div>
-          <div class="spotlight-card step-card">
-            <span class="step-num">04 / ЛОГИСТИКА ПО РК</span>
-            <h4>Погрузка «труба в трубу»</h4>
-            <p>Телескопическая укладка меньших диаметров внутрь больших позволяет привезти в одной еврофуре до двух раз больше погонных метров.</p>
-          </div>
-        </div>
-
-        <!-- Signature KazUnion Feature: Factory Tour Invitation -->
-        <div class="tour-banner reveal">
-          <div class="tour-banner-copy">
-            <span class="eyebrow" style="margin-bottom:8px">Открытое производство</span>
-            <h3>Приглашаем на экскурсию на завод SUMMUS</h3>
-            <p>
-              Хотите лично убедиться в первичном сырье, мощностях и реальной жесткости трубы перед крупным контрактом? Приезжайте к нам на производство или подключитесь по видеосвязи — испытаем образец из вашей партии на прессе прямо при вас.
-            </p>
-          </div>
-          <button type="button" class="btn btn-glow" id="bookTourBtn">
-            Записаться на экскурсию в цех
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </button>
-        </div>
-
-        <!-- Documentation & Certificates Block -->
-        <div class="section-head reveal" style="margin-bottom:32px">
-          <div class="section-head-left">
-            <span class="eyebrow">Документация для ПТО и технадзора</span>
-            <h3 style="font-size:clamp(22px,2.6vw,32px);font-weight:800">Закрываем все требования госорганов и генподрядчиков</h3>
-          </div>
-        </div>
-
-        <div class="docs-grid reveal">
-          <div class="spotlight-card doc-card">
-            <div class="doc-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
-            </div>
-            <h4>Сертификат СТ-KZ</h4>
-            <p>Официальное подтверждение доли казахстанского содержания для участия в государственных закупках, квазигоссекторе и крупных тендерах.</p>
-            <span class="doc-stamp">✓ ОРИГИНАЛ / КОПИЯ В ПАКЕТЕ</span>
-          </div>
-
-          <div class="spotlight-card doc-card">
-            <div class="doc-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            </div>
-            <h4>Сертификат соответствия</h4>
-            <p>Подтверждает полное соответствие труб требованиям ГОСТ Р 54475 / СТ РК по геометрии, прочности и санитарно-экологической безопасности.</p>
-            <span class="doc-stamp">✓ ГОСУДАРСТВЕННЫЙ РЕЕСТР</span>
-          </div>
-
-          <div class="spotlight-card doc-card">
-            <div class="doc-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="13" y2="13"/></svg>
-            </div>
-            <h4>Паспорт качества партии</h4>
-            <p>Выдается на каждую отгружаемую машину с указанием даты выпуска, марки сырья, номера партии и штампа службы ОТК завода.</p>
-            <span class="doc-stamp">✓ НА КАЖДУЮ ОТГРУЗКУ</span>
-          </div>
-
-          <div class="spotlight-card doc-card">
-            <div class="doc-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6"/><path d="M10 3v5.4a2 2 0 0 1-.5 1.3L5 15.2A2 2 0 0 0 6.5 18.5h11a2 2 0 0 0 1.5-3.3l-4.5-5.5a2 2 0 0 1-.5-1.3V3"/></svg>
-            </div>
-            <h4>Протоколы испытаний</h4>
-            <p>Официальные лабораторные протоколы физико-механических испытаний для беспрепятственной сдачи исполнительной документации.</p>
-            <span class="doc-stamp">✓ АККРЕДИТОВАННАЯ ЛАБОРАТОРИЯ</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Full-Width 3D Horizontal Corrugated Pipe Divider -->
+    <div class="pipe-divider-full" aria-hidden="true"></div>
 
     <!-- ===================================================================
-         5. Калькулятор партии и ведомости спецификации (#calculator)
+         5. Минималистичный Расчет КП и Быстрая Заявка
          =================================================================== -->
-    <section class="section calc-section" id="calculator">
+    <section id="orderSection" class="order-section">
       <div class="container">
-        <div class="section-head reveal">
-          <div class="section-head-left">
-            <span class="eyebrow">Мгновенный сметный расчет</span>
-            <h2 class="section-title">Калькулятор спецификации с НДС 16%</h2>
-            <p class="section-sub">
-              Соберите все диаметры по проекту в единую ведомость: система сама округлит объем кратно 6-метровым отрезкам, посчитает комплектацию муфтами и подготовит заявку на счет.
-            </p>
-          </div>
-        </div>
+        <h2 class="section-heading-center reveal">
+          Быстрый Расчет КП и Заявка
+        </h2>
 
-        <div class="calc-grid reveal">
-          <div class="calc-card">
-            <h3 style="font-size:20px;font-weight:800;margin-bottom:6px">Параметры позиции</h3>
-            <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:22px">Выберите тип трубы, диаметр и проектный метраж</p>
+        <div class="kp-minimal-card reveal" id="orderPanel">
+          <form id="orderForm">
+            <!-- Row 1: Pipe Selection + Meter Stepper -->
+            <div class="kp-controls-row">
+              <div class="form-field kp-field-product">
+                <label class="form-label" for="calcProductSelect">Труба и диаметр</label>
+                <select class="form-input" id="calcProductSelect"></select>
+              </div>
 
-            <div class="field-group">
-              <label class="field-label" for="calcSeries"><span>Серия труб</span></label>
-              <select class="field-input" id="calcSeries">
-                <option value="sn8">Двухслойные канализационные трубы SN 8</option>
-                <option value="drainage">Гофрированные дренажные трубы (перфорированные)</option>
-              </select>
-            </div>
-
-            <div class="field-group">
-              <label class="field-label" for="calcDiameter"><span>Типоразмер и цена за 1 п/м</span></label>
-              <select class="field-input" id="calcDiameter"></select>
-            </div>
-
-            <div class="field-group">
-              <label class="field-label" for="calcMeters">
-                <span>Длина трассы, п/м</span>
-                <span class="mono" style="color:var(--cyan-bright)">Кратность L = 6 м</span>
-              </label>
-              <input type="number" class="field-input mono" id="calcMeters" value="60" min="6" step="6" />
-              <div class="preset-row">
-                <button type="button" class="chip-btn" data-preset-m="18">18 м</button>
-                <button type="button" class="chip-btn" data-preset-m="36">36 м</button>
-                <button type="button" class="chip-btn" data-preset-m="60">60 м</button>
-                <button type="button" class="chip-btn" data-preset-m="120">120 м</button>
-                <button type="button" class="chip-btn" data-preset-m="300">300 м</button>
-                <button type="button" class="chip-btn" data-preset-m="600">600 м</button>
+              <div class="form-field kp-field-meters">
+                <label class="form-label" for="calcMeters">Метраж (кратно 6 м)</label>
+                <div class="kp-stepper">
+                  <button type="button" class="kp-step-btn" id="calcMinusBtn" aria-label="Уменьшить на 6 м">−</button>
+                  <input type="number" class="mono" id="calcMeters" value="60" min="6" step="6" />
+                  <button type="button" class="kp-step-btn" id="calcPlusBtn" aria-label="Увеличить на 6 м">+</button>
+                </div>
               </div>
             </div>
 
-            <div class="calc-preview">
-              <div class="calc-preview-line">
-                <span>Количество хлыстов (по 6 м):</span>
-                <strong id="previewSegments">10 шт × 6 м (60 п/м)</strong>
+            <!-- Row 2: Clean Summary Banner -->
+            <div class="kp-result-banner">
+              <div class="kp-result-info">
+                <span class="kp-result-title" id="previewSegments">10 отрезков × 6 м (60 п/м)</span>
+                <span class="kp-result-sub" id="previewKit">В комплекте: 10 муфт + 20 уплотнительных колец</span>
               </div>
-              <div class="calc-preview-line">
-                <span>Комплект поставки:</span>
-                <strong id="previewKit">10 муфт + 20 колец EPDM</strong>
-              </div>
-              <div class="calc-preview-sum">
-                <span style="font-size:14px;font-weight:700">Сумма позиции с НДС:</span>
-                <strong id="previewTotal">396 000 ₸</strong>
+              <div class="kp-result-price">
+                <span class="kp-price-label">Итого с НДС 16%</span>
+                <strong class="mono" id="previewTotal">176 100 ₸</strong>
               </div>
             </div>
 
-            <button type="button" class="btn btn-glow" style="width:100%" id="calcAddBtn">
-              + Добавить позицию в спецификацию
-            </button>
-          </div>
-
-          <div class="calc-card">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
-              <div>
-                <h3 style="font-size:20px;font-weight:800;margin-bottom:2px">Ваша спецификация</h3>
-                <span style="font-size:12.5px;color:var(--text-muted)">Отпускные цены завода SUMMUS</span>
+            <!-- Row 3: Minimal Contact Inputs (Name + Phone) -->
+            <div class="kp-contacts-row">
+              <div class="form-field">
+                <label class="form-label" for="orderName">Имя или компания</label>
+                <input type="text" class="form-input" id="orderName" placeholder="ТОО «СтройМонтаж»" required />
               </div>
-              <div style="display:flex;align-items:center;gap:8px">
-                <span class="chip-btn" style="color:var(--cyan-bright);border-color:rgba(71,178,255,0.3)" id="bomCountBadge">2 поз.</span>
-                <button type="button" class="chip-btn" id="bomClearBtn">Очистить</button>
+              <div class="form-field">
+                <label class="form-label" for="orderPhone">Телефон / WhatsApp</label>
+                <input type="tel" class="form-input mono" id="orderPhone" placeholder="+7 (7__) ___-__-__" required />
               </div>
             </div>
 
-            <div id="bomEmpty" style="display:none;padding:38px 20px;text-align:center;border:1px dashed var(--border-default);border-radius:12px;color:var(--text-muted);font-size:14px">
-              Добавьте нужные диаметры из калькулятора слева или нажмите «+ В КП» в таблице цен.
+            <div class="kp-submit-wrap">
+              <button type="submit" class="pipe-cta-btn">
+                <span>ПОЛУЧИТЬ КП И РАСЧЕТ</span>
+              </button>
             </div>
 
-            <div class="bom-list" id="bomList"></div>
-
-            <div id="bomSummary">
-              <div class="calc-preview-line">
-                <span>Общий объем партии:</span>
-                <strong id="bomTotalMeters">96 п/м</strong>
-              </div>
-              <div class="calc-preview-line">
-                <span>В том числе НДС 16%:</span>
-                <strong id="bomVatIncluded">67 531 ₸</strong>
-              </div>
-              <div style="display:flex;justify-content:space-between;align-items:baseline;margin:14px 0 20px;padding-top:12px;border-top:1px solid var(--border-subtle)">
-                <span style="font-size:16px;font-weight:700">Итого с НДС 16%:</span>
-                <strong class="mono" style="font-size:26px;color:#FFFFFF" id="bomGrandTotal">489 600 ₸</strong>
-              </div>
-
-              <div style="display:flex;flex-wrap:wrap;gap:10px">
-                <button type="button" class="btn btn-glow" style="flex:1" id="bomToFormBtn">
-                  Оформить запрос КП по списку
-                </button>
-                <button type="button" class="btn btn-glass btn-sm" id="bomCopyBtn">
-                  Скопировать КП
-                </button>
-              </div>
-
-              <div class="telescopic-card">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#47B2FF" stroke-width="2" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/></svg>
-                <span id="telescopicText"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         6. Контакты отдела сбыта и Запрос Коммерческого Предложения (#contact)
-         =================================================================== -->
-    <section class="section cyber-grid" id="contact">
-      <div class="container">
-        <div class="contact-panel reveal">
-          <div>
-            <span class="eyebrow">Отдел сбыта завода SUMMUS</span>
-            <h2 class="section-title" style="margin-bottom:16px">Рассчитаем поставку и подготовим КП за 30 минут</h2>
-            <p style="font-size:15.5px;color:var(--text-secondary);line-height:1.62">
-              Оставьте контакты или прикрепите спецификацию — закрепим персонального инженера, рассчитаем оптовую скидку от объема, подберем фитинги и оптимальную схему автодоставки на ваш объект.
-            </p>
-
-            <div class="contact-meta">
-              <div class="contact-meta-item">
-                <span>Условия оплаты и документы</span>
-                <strong>Безналичный расчет с НДС 16% • СТ-KZ, паспорта качества и протоколы ОТК</strong>
-              </div>
-              <div class="contact-meta-item">
-                <span>География отгрузок</span>
-                <strong>Самовывоз со склада завода и прямая доставка по всему Казахстану</strong>
-              </div>
-              <div class="contact-meta-item">
-                <span>График работы производства и отдела продаж</span>
-                <strong class="mono">Пн–Сб: 09:00 – 18:00</strong>
-              </div>
-            </div>
-          </div>
-
-          <form class="contact-form-box" id="inquiryForm">
-            <h3 style="font-size:21px;font-weight:800;margin-bottom:6px">Запросить прайс, КП или экскурсию</h3>
-            <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:22px">Прямое обращение на завод без посредников и торговых наценок</p>
-
-            <div class="form-2col">
-              <div class="field-group">
-                <label class="field-label" for="inquiryName">Ваше имя / Компания *</label>
-                <input type="text" class="field-input" id="inquiryName" placeholder="ТОО «СтройМонтаж»" required />
-              </div>
-              <div class="field-group">
-                <label class="field-label" for="inquiryPhone">Телефон / WhatsApp *</label>
-                <input type="tel" class="field-input mono" id="inquiryPhone" placeholder="+7 (7__) ___-__-__" required />
-              </div>
-            </div>
-
-            <div class="field-group">
-              <label class="field-label" for="inquiryCity">Город или объект поставки</label>
-              <input type="text" class="field-input" id="inquiryCity" placeholder="Астана, Алматы, Караганда, Шымкент, Атырау..." />
-            </div>
-
-            <div class="field-group">
-              <label class="field-label" for="inquirySpec">Спецификация или комментарий</label>
-              <textarea class="field-input" id="inquirySpec" rows="4" placeholder="Укажите нужные диаметры и метраж (например: SN8 Ø315 — 180 м, Дренаж Ø160 — 120 м) или удобную дату экскурсии в цех..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-glow" style="width:100%">
-              Получить заводской расчет с НДС 16%
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </button>
-
-            <div class="form-success" id="inquiryStatus" role="status"></div>
+            <div class="order-status" id="orderStatus" role="status"></div>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Minimalist Dark Footer -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="brand-lockup">
-        <img src="./assets/logo-summus-dark.png" alt="SUMMUS" class="brand-logo" style="height:24px" />
-        <span style="color:var(--text-muted);font-size:13px">© 2026 Завод гофрированных труб и комплектующих SUMMUS</span>
-      </div>
-      <span class="mono">Отрезки L = 6 м • Все цены с НДС 16% (₸)</span>
+  <footer class="studio-footer">
+    <div class="container">
+      <img src="./assets/logo-summus-transparent.png" alt="SUMMUS" />
+      <p><strong>SUMMUS</strong> — Завод гофрированных труб и фитингов. Все права защищены.</p>
     </div>
   </footer>
 
-  <!-- Toast Notification -->
+  <!-- =====================================================================
+       POPUP MODAL 1: Detailed Product / Card Inspector («Подробнее»)
+       All Detailed Information (Prices, Sizes, Specs, CAD, Order) Inside!
+       ===================================================================== -->
+  <div class="modal-backdrop" id="productDetailModal" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle" hidden>
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-header-badges" id="modalHeaderBadges"></div>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Закрыть окно">
+          ✕
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-grid">
+          <!-- Left Column: Realistic Studio Photo + CAD Cross-Section + Size Switcher -->
+          <div class="modal-visual-col">
+            <div class="modal-cad-card">
+              <div class="modal-cad-top">
+                <span id="modalCadLabel">СТУДИЙНОЕ ФОТО И ПРОФИЛЬ</span>
+                <span class="mono" id="modalCadRatio">OD / ID</span>
+              </div>
+              <div class="modal-cad-stage">
+                <svg id="modalCadSvg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg"></svg>
+              </div>
+              <div class="modal-cad-caption">
+                Наружный гофрированный слой PE-HD (черный) • Внутренний гладкий слой (голубой)
+              </div>
+            </div>
+
+            <!-- Interactive Quick Diameter Switcher inside Modal -->
+            <div class="modal-size-switcher-wrap">
+              <span class="switcher-label">Выберите другой размер в этой линейке:</span>
+              <div class="modal-size-pills" id="modalSizePills"></div>
+            </div>
+          </div>
+
+          <!-- Right Column: Full Specifications, Prices with 16% VAT & Instant Order Calculator -->
+          <div class="modal-info-col">
+            <h2 class="modal-title" id="modalProductTitle">Гофрированная труба SN 8 — Ø 315/271 мм</h2>
+            <p class="modal-subtitle" id="modalProductSubtitle">
+              Двухслойная раструбная / муфтовая труба из полиэтилена высокой плотности для наружной канализации и водоотведения.
+            </p>
+
+            <!-- Price Highlight Box -->
+            <div class="modal-price-highlight" id="modalPriceHighlight">
+              <div class="price-col">
+                <span class="price-lbl">Цена за 1 погонный метр (с НДС 16%)</span>
+                <strong class="price-big mono" id="modalPricePerM">6 600 ₸</strong>
+              </div>
+              <div class="price-divider"></div>
+              <div class="price-col">
+                <span class="price-lbl">Цена за отрезок L = 6 м</span>
+                <strong class="price-seg mono" id="modalPricePerSeg">39 600 ₸</strong>
+              </div>
+            </div>
+
+            <!-- Technical Specifications Table -->
+            <div class="modal-specs-box">
+              <h4>Технические характеристики и комплектация</h4>
+              <div class="modal-specs-list" id="modalSpecsList"></div>
+            </div>
+
+            <!-- Instant Batch Calculation inside Modal -->
+            <div class="modal-order-box" id="modalOrderBox">
+              <div class="modal-order-controls">
+                <div class="modal-qty-field">
+                  <label for="modalMetersInput">Количество метров (кратно 6 м):</label>
+                  <div class="qty-stepper">
+                    <button type="button" class="qty-btn" id="modalQtyMinus" aria-label="Уменьшить на 6 м">−</button>
+                    <input type="number" id="modalMetersInput" class="mono" value="30" min="6" step="6" />
+                    <button type="button" class="qty-btn" id="modalQtyPlus" aria-label="Увеличить на 6 м">+</button>
+                  </div>
+                </div>
+                <div class="modal-qty-total">
+                  <span>Сумма партии (<strong id="modalCalcSegs">5 отр.</strong>):</span>
+                  <strong class="mono" id="modalCalcSum">198 000 ₸</strong>
+                </div>
+              </div>
+
+              <div class="modal-action-btns">
+                <button type="button" class="solid-btn" style="width:100%" id="modalInstantOrderBtn">
+                  Перейти к расчету КП и заявке →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       POPUP MODAL 2: Full Factory Price List Table (SN 8 + Drainage)
+       ===================================================================== -->
+  <div class="modal-backdrop" id="fullPriceModal" role="dialog" aria-modal="true" aria-labelledby="fullPriceModalTitle" hidden>
+    <div class="modal-window modal-window-wide">
+      <div class="modal-header">
+        <div class="modal-header-badges">
+          <span class="series-pill series-sn8">ПРАЙС-ЛИСТ ЗАВОДА SUMMUS</span>
+          <span class="vat-pill">Цены в тенге (₸) с НДС 16% • Отрезки L = 6 м</span>
+        </div>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Закрыть окно">
+          ✕
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2 class="modal-title" id="fullPriceModalTitle" style="margin-bottom:6px">
+          Сводный Прайс-Лист: Гофрированные и Дренажные Трубы
+        </h2>
+        <p class="modal-subtitle" style="margin-bottom:20px">
+          Нажмите на любую позицию в таблице, чтобы открыть её подробное попап-окно.
+        </p>
+
+        <div class="full-price-tables-grid" id="fullPriceTablesContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Feedback -->
   <div class="toast" id="siteToast" role="status" aria-live="polite">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>
     <span id="siteToastText">Готово</span>
   </div>
 
