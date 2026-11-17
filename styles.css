@@ -184,7 +184,7 @@ button, input, select, textarea {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  filter: drop-shadow(0 12px 20px rgba(19, 22, 27, 0.08));
+  filter: none;
   transition: transform 0.55s var(--ease-out);
 }
 
