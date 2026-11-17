@@ -529,8 +529,6 @@ function populateProductModal() {
   const specsList = document.getElementById('modalSpecsList');
 
   if (item.series === 'fittings') {
-    document.getElementById('modalCadLabel').textContent = 'СТУДИЙНОЕ ФОТО И СХЕМА';
-    document.getElementById('modalCadRatio').textContent = item.code;
     titleEl.textContent = item.name;
     subEl.textContent = item.spec;
     priceBox.style.display = 'none';
@@ -550,9 +548,6 @@ function populateProductModal() {
 
   const isSn8 = item.series === 'sn8';
   const wallHeight = ((item.od - item.id) / 2).toFixed(1);
-
-  document.getElementById('modalCadLabel').textContent = 'СТУДИЙНОЕ ФОТО И ПРОФИЛЬ';
-  document.getElementById('modalCadRatio').textContent = `OD ${item.od} / ID ${item.id} мм`;
 
   titleEl.textContent = isSn8
     ? `Гофрированная двухслойная труба SN 8 — Ø ${item.od}/${item.id} мм`
