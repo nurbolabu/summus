@@ -8,20 +8,69 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23181C22'/%3E%3Ccircle cx='32' cy='32' r='19' fill='%23F9FAFC' stroke='%234BA3E3' stroke-width='6'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add('js-ready');</script>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
 
-  <!-- Subtle Floating Quick Navigation Pill -->
+  <!-- Header Menu with SUMMUS Logo, Desktop Links, CTA & Mobile Burger Button -->
   <div class="top-nav-wrap">
-    <nav class="top-nav-pill" aria-label="Быстрая навигация">
-      <a href="#advantages" class="pill-link">Преимущества</a>
-      <a href="#catalog" class="pill-link">Каталог</a>
-      <a href="#cooperation" class="pill-link">Сотрудничество</a>
-      <a href="#orderSection" class="pill-cta">Заказать / КП</a>
-    </nav>
+    <div class="container">
+      <div class="top-nav-pill">
+        <a href="#top" class="header-logo-link" aria-label="SUMMUS — На главную">
+          <img src="./assets/logo-summus-transparent.png" alt="SUMMUS" class="header-logo-img" />
+        </a>
+
+        <nav class="header-nav-links" aria-label="Основная навигация">
+          <a href="#advantages" class="pill-link">Преимущества</a>
+          <a href="#catalog" class="pill-link">Каталог</a>
+          <a href="#catalogCardsAnchor" class="pill-link">Товары</a>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="pill-cta desktop-cta" data-open-kp-modal>
+            Заказать КП
+          </button>
+
+          <button
+            type="button"
+            class="burger-btn"
+            id="burgerOpenBtn"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Slide-Out Side Drawer Menu -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" hidden>
+    <aside class="mobile-drawer" aria-label="Мобильное меню">
+      <div class="mobile-drawer-top">
+        <img src="./assets/logo-summus-transparent.png" alt="SUMMUS" class="drawer-logo-img" />
+        <button type="button" class="modal-close-btn" id="burgerCloseBtn" aria-label="Закрыть меню">
+          ✕
+        </button>
+      </div>
+
+      <nav class="mobile-drawer-nav">
+        <a href="#advantages" class="drawer-link" data-drawer-link>Преимущества</a>
+        <a href="#catalog" class="drawer-link" data-drawer-link>Каталог</a>
+        <a href="#catalogCardsAnchor" class="drawer-link" data-drawer-link>Товары</a>
+      </nav>
+
+      <div class="mobile-drawer-bottom">
+        <button type="button" class="solid-btn drawer-kp-btn" data-open-kp-modal>
+          Заказать КП
+        </button>
+      </div>
+    </aside>
   </div>
 
   <main id="top">
@@ -57,7 +106,7 @@
         </h2>
 
         <div class="advantages-grid">
-          <!-- Card 1: Широкий Ассортимент Труб (Realistic U-Pipe Studio Photo) -->
+          <!-- Card 1: Широкий Ассортимент Труб -->
           <article class="adv-card reveal">
             <div class="adv-photo-wrap">
               <img src="./assets/adv-real-1-assortment.jpg" alt="Широкий ассортимент гофрированных труб" loading="lazy" />
@@ -66,7 +115,7 @@
             <p class="adv-sub">Канализационные и дренажные<br/>трубы Ø 110–1000 мм</p>
           </article>
 
-          <!-- Card 2: Городской Склад и Самовывоз (Realistic Warehouse with Pipes Photo) -->
+          <!-- Card 2: Городской Склад и Самовывоз -->
           <article class="adv-card reveal">
             <div class="adv-photo-wrap">
               <img src="./assets/adv-theme-warehouse.jpg" alt="Городской склад и самовывоз" loading="lazy" />
@@ -75,7 +124,7 @@
             <p class="adv-sub">Постоянный запас в наличии<br/>и быстрая погрузка</p>
           </article>
 
-          <!-- Card 3: Оперативная Доставка (Realistic Cargo Truck Loaded with Pipes Photo) -->
+          <!-- Card 3: Оперативная Доставка -->
           <article class="adv-card reveal">
             <div class="adv-photo-wrap">
               <img src="./assets/adv-theme-delivery.jpg" alt="Оперативная доставка грузовым транспортом" loading="lazy" />
@@ -84,7 +133,7 @@
             <p class="adv-sub">Доставка спецтранспортом<br/>на объекты по Казахстану</p>
           </article>
 
-          <!-- Card 4: Полная Комплектация Фитингами (Realistic Curved Pipe Bends Photo) -->
+          <!-- Card 4: Полная Комплектация Фитингами -->
           <article class="adv-card reveal">
             <div class="adv-photo-wrap">
               <img src="./assets/adv-real-4-fittings.jpg" alt="Полная комплектация фитингами и отводами" loading="lazy" />
@@ -93,7 +142,7 @@
             <p class="adv-sub">Муфты, отводы, тройники,<br/>крестовины и переходы</p>
           </article>
 
-          <!-- Card 5: Электронный Документооборот (ЭДО) (Realistic Laptop & Contracts Photo) -->
+          <!-- Card 5: Электронный Документооборот (ЭДО) -->
           <article class="adv-card reveal">
             <div class="adv-photo-wrap">
               <img src="./assets/adv-theme-edo.jpg" alt="Электронный документооборот ЭДО и договоры" loading="lazy" />
@@ -102,7 +151,7 @@
             <p class="adv-sub">Официальный договор, ЭСФ<br/>и гибкая отсрочка оплаты</p>
           </article>
 
-          <!-- Card 6: Гарантия Качества Производителя (Realistic Quality Control Photo) -->
+          <!-- Card 6: Гарантия Качества Производителя -->
           <article class="adv-card reveal">
             <div class="adv-photo-wrap">
               <img src="./assets/adv-theme-quality.jpg" alt="Гарантия качества производителя" loading="lazy" />
@@ -133,12 +182,11 @@
 
     <!-- ===================================================================
          3. Section: «Каталог»
-            Main Studio Category Cards + Minimalist Product Cards Grid
-            (Only Photo, Name, Size & «Подробнее» Button on each Card!)
+            Main Studio Category Cards + Full-Width Category Tabs + Product Grid
          =================================================================== -->
     <section class="catalog-section">
       <div class="container">
-        <!-- Two Main Studio Category Cards from Client Reference Photo -->
+        <!-- Two Main Studio Category Cards -->
         <div class="catalog-showcase-grid">
           <!-- Left Card: ГОФРИРОВАННЫЕ ТРУБЫ -->
           <article class="cat-showcase-card reveal">
@@ -169,8 +217,9 @@
           </article>
         </div>
 
-        <!-- Minimalist Catalog Product Cards Grid -->
+        <!-- Catalog Product Cards Block -->
         <div class="catalog-cards-block" id="catalogCardsAnchor">
+          <!-- Full-Width Category Tabs matching the 2-column grid container width -->
           <div class="spec-toolbar reveal">
             <div class="tab-group" role="tablist" aria-label="Разделы каталога">
               <button type="button" class="tab-btn is-active" data-cat-filter="all">
@@ -186,173 +235,10 @@
                 Фитинги к ним (6)
               </button>
             </div>
-
-            <div class="toolbar-right-group">
-              <button type="button" class="table-open-btn" id="openFullPriceModalBtn">
-                Сводный прайс-лист (таблица)
-              </button>
-            </div>
           </div>
 
-          <!-- Minimalist Product Cards Grid (Only Photo, Name, Size & «Подробнее») -->
+          <!-- Minimalist Product Cards Grid -->
           <div class="product-cards-grid" id="productCardsGrid" aria-live="polite"></div>
-        </div>
-
-        <!-- Bottom Pipe Loop Motif from Client Reference Photo -->
-        <div class="pipe-loop-accent" aria-hidden="true">
-          <img src="./assets/icon-pipe-u.png" alt="" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Full-Width 3D Horizontal Corrugated Pipe Divider -->
-    <div class="pipe-divider-full" aria-hidden="true"></div>
-
-    <!-- ===================================================================
-         4. NEW SECTION: «Преимущества Сотрудничества с Заводом SUMMUS»
-         =================================================================== -->
-    <section id="cooperation" class="cooperation-section">
-      <div class="container">
-        <h2 class="section-heading-center reveal">
-          Преимущества Сотрудничества с Нами
-        </h2>
-        <p class="section-sub-center reveal">
-          Надежные поставки для строительных компаний, подрядчиков, дилеров и коммунальных предприятий по всему Казахстану
-        </p>
-
-        <div class="coop-grid">
-          <article class="coop-card reveal">
-            <div class="coop-top">
-              <span class="coop-num mono">01</span>
-              <span class="coop-tag">Завод-производитель</span>
-            </div>
-            <h3 class="coop-title">Прямые заводские цены с НДС 16%</h3>
-            <p class="coop-desc">
-              Поставляем продукцию напрямую с производственной линии без посредников. Фиксируем стоимость партии в спецификации и коммерческом предложении.
-            </p>
-          </article>
-
-          <article class="coop-card reveal">
-            <div class="coop-top">
-              <span class="coop-num mono">02</span>
-              <span class="coop-tag">Готовый монтаж</span>
-            </div>
-            <h3 class="coop-title">Полная комплектация каждого отрезка</h3>
-            <p class="coop-desc">
-              Каждая 6-метровая труба SN 8 поставляется сразу в комплекте с 1 соединительной муфтой и 2 профильными уплотнительными кольцами EPDM.
-            </p>
-          </article>
-
-          <article class="coop-card reveal">
-            <div class="coop-top">
-              <span class="coop-num mono">03</span>
-              <span class="coop-tag">Без простоев</span>
-            </div>
-            <h3 class="coop-title">Складской запас и отгрузка в день заказа</h3>
-            <p class="coop-desc">
-              Поддерживаем постоянное наличие ходовых диаметров от Ø 110 до Ø 630 мм на городском складе для быстрого самовывоза или отправки на объект.
-            </p>
-          </article>
-
-          <article class="coop-card reveal">
-            <div class="coop-top">
-              <span class="coop-num mono">04</span>
-              <span class="coop-tag">Бухгалтерия и ЭДО</span>
-            </div>
-            <h3 class="coop-title">Прозрачный ЭДО и гибкие условия оплаты</h3>
-            <p class="coop-desc">
-              Оперативно выставляем счета, оформляем ЭСФ и СНТ через электронный документооборот. Предусмотрена отсрочка платежа для постоянных партнеров.
-            </p>
-          </article>
-
-          <article class="coop-card reveal">
-            <div class="coop-top">
-              <span class="coop-num mono">05</span>
-              <span class="coop-tag">Лабораторный контроль</span>
-            </div>
-            <h3 class="coop-title">Сертификаты и паспорт качества на партию</h3>
-            <p class="coop-desc">
-              Трубы производятся из первичного полиэтилена высокой плотности PE-HD со строгим контролем кольцевой жесткости SN 8 (≥ 8 кН/м²) и сроком службы 50+ лет.
-            </p>
-          </article>
-
-          <article class="coop-card reveal">
-            <div class="coop-top">
-              <span class="coop-num mono">06</span>
-              <span class="coop-tag">Инженерная поддержка</span>
-            </div>
-            <h3 class="coop-title">Комплектация объектов «под ключ»</h3>
-            <p class="coop-desc">
-              Помогаем рассчитать точное количество отрезков по 6 м и подобрать все необходимые фитинги: отводы 45°/90°, тройники, крестовины и переходы.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Full-Width 3D Horizontal Corrugated Pipe Divider -->
-    <div class="pipe-divider-full" aria-hidden="true"></div>
-
-    <!-- ===================================================================
-         5. Минималистичный Расчет КП и Быстрая Заявка
-         =================================================================== -->
-    <section id="orderSection" class="order-section">
-      <div class="container">
-        <h2 class="section-heading-center reveal">
-          Быстрый Расчет КП и Заявка
-        </h2>
-
-        <div class="kp-minimal-card reveal" id="orderPanel">
-          <form id="orderForm">
-            <!-- Row 1: Pipe Selection + Meter Stepper -->
-            <div class="kp-controls-row">
-              <div class="form-field kp-field-product">
-                <label class="form-label" for="calcProductSelect">Труба и диаметр</label>
-                <select class="form-input" id="calcProductSelect"></select>
-              </div>
-
-              <div class="form-field kp-field-meters">
-                <label class="form-label" for="calcMeters">Метраж (кратно 6 м)</label>
-                <div class="kp-stepper">
-                  <button type="button" class="kp-step-btn" id="calcMinusBtn" aria-label="Уменьшить на 6 м">−</button>
-                  <input type="number" class="mono" id="calcMeters" value="60" min="6" step="6" />
-                  <button type="button" class="kp-step-btn" id="calcPlusBtn" aria-label="Увеличить на 6 м">+</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Row 2: Clean Summary Banner -->
-            <div class="kp-result-banner">
-              <div class="kp-result-info">
-                <span class="kp-result-title" id="previewSegments">10 отрезков × 6 м (60 п/м)</span>
-                <span class="kp-result-sub" id="previewKit">В комплекте: 10 муфт + 20 уплотнительных колец</span>
-              </div>
-              <div class="kp-result-price">
-                <span class="kp-price-label">Итого с НДС 16%</span>
-                <strong class="mono" id="previewTotal">176 100 ₸</strong>
-              </div>
-            </div>
-
-            <!-- Row 3: Minimal Contact Inputs (Name + Phone) -->
-            <div class="kp-contacts-row">
-              <div class="form-field">
-                <label class="form-label" for="orderName">Имя или компания</label>
-                <input type="text" class="form-input" id="orderName" placeholder="ТОО «СтройМонтаж»" required />
-              </div>
-              <div class="form-field">
-                <label class="form-label" for="orderPhone">Телефон / WhatsApp</label>
-                <input type="tel" class="form-input mono" id="orderPhone" placeholder="+7 (7__) ___-__-__" required />
-              </div>
-            </div>
-
-            <div class="kp-submit-wrap">
-              <button type="submit" class="pipe-cta-btn">
-                <span>ПОЛУЧИТЬ КП И РАСЧЕТ</span>
-              </button>
-            </div>
-
-            <div class="order-status" id="orderStatus" role="status"></div>
-          </form>
         </div>
       </div>
     </section>
@@ -366,8 +252,7 @@
   </footer>
 
   <!-- =====================================================================
-       POPUP MODAL 1: Detailed Product / Card Inspector («Подробнее»)
-       All Detailed Information (Prices, Sizes, Specs, CAD, Order) Inside!
+       POPUP MODAL 1: Detailed Product Inspector («Подробнее»)
        ===================================================================== -->
   <div class="modal-backdrop" id="productDetailModal" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle" hidden>
     <div class="modal-window">
@@ -385,7 +270,7 @@
             <div class="modal-cad-card">
               <div class="modal-cad-top">
                 <span id="modalCadLabel">СТУДИЙНОЕ ФОТО И ПРОФИЛЬ</span>
-                <span class="mono" id="modalCadRatio">OD / ID</span>
+                <span id="modalCadRatio">OD / ID</span>
               </div>
               <div class="modal-cad-stage">
                 <svg id="modalCadSvg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -402,7 +287,7 @@
             </div>
           </div>
 
-          <!-- Right Column: Full Specifications, Prices with 16% VAT & Instant Order Calculator -->
+          <!-- Right Column: Full Specifications & Prices with 16% VAT -->
           <div class="modal-info-col">
             <h2 class="modal-title" id="modalProductTitle">Гофрированная труба SN 8 — Ø 315/271 мм</h2>
             <p class="modal-subtitle" id="modalProductSubtitle">
@@ -413,12 +298,12 @@
             <div class="modal-price-highlight" id="modalPriceHighlight">
               <div class="price-col">
                 <span class="price-lbl">Цена за 1 погонный метр (с НДС 16%)</span>
-                <strong class="price-big mono" id="modalPricePerM">6 600 ₸</strong>
+                <strong class="price-big" id="modalPricePerM">6 600 ₸</strong>
               </div>
               <div class="price-divider"></div>
               <div class="price-col">
                 <span class="price-lbl">Цена за отрезок L = 6 м</span>
-                <strong class="price-seg mono" id="modalPricePerSeg">39 600 ₸</strong>
+                <strong class="price-seg" id="modalPricePerSeg">39 600 ₸</strong>
               </div>
             </div>
 
@@ -428,29 +313,9 @@
               <div class="modal-specs-list" id="modalSpecsList"></div>
             </div>
 
-            <!-- Instant Batch Calculation inside Modal -->
-            <div class="modal-order-box" id="modalOrderBox">
-              <div class="modal-order-controls">
-                <div class="modal-qty-field">
-                  <label for="modalMetersInput">Количество метров (кратно 6 м):</label>
-                  <div class="qty-stepper">
-                    <button type="button" class="qty-btn" id="modalQtyMinus" aria-label="Уменьшить на 6 м">−</button>
-                    <input type="number" id="modalMetersInput" class="mono" value="30" min="6" step="6" />
-                    <button type="button" class="qty-btn" id="modalQtyPlus" aria-label="Увеличить на 6 м">+</button>
-                  </div>
-                </div>
-                <div class="modal-qty-total">
-                  <span>Сумма партии (<strong id="modalCalcSegs">5 отр.</strong>):</span>
-                  <strong class="mono" id="modalCalcSum">198 000 ₸</strong>
-                </div>
-              </div>
-
-              <div class="modal-action-btns">
-                <button type="button" class="solid-btn" style="width:100%" id="modalInstantOrderBtn">
-                  Перейти к расчету КП и заявке →
-                </button>
-              </div>
-            </div>
+            <button type="button" class="solid-btn" style="width:100%" id="modalOpenKpBtn">
+              Заказать КП
+            </button>
           </div>
         </div>
       </div>
@@ -458,29 +323,69 @@
   </div>
 
   <!-- =====================================================================
-       POPUP MODAL 2: Full Factory Price List Table (SN 8 + Drainage)
+       POPUP MODAL 2: «Заказать КП» (3 Input Rows + WhatsApp / Email / Call Icons)
        ===================================================================== -->
-  <div class="modal-backdrop" id="fullPriceModal" role="dialog" aria-modal="true" aria-labelledby="fullPriceModalTitle" hidden>
-    <div class="modal-window modal-window-wide">
+  <div class="modal-backdrop" id="kpOrderModal" role="dialog" aria-modal="true" aria-labelledby="kpModalTitle" hidden>
+    <div class="modal-window modal-window-kp">
       <div class="modal-header">
-        <div class="modal-header-badges">
-          <span class="series-pill series-sn8">ПРАЙС-ЛИСТ ЗАВОДА SUMMUS</span>
-          <span class="vat-pill">Цены в тенге (₸) с НДС 16% • Отрезки L = 6 м</span>
-        </div>
+        <h3 class="kp-modal-heading" id="kpModalTitle">Заказать КП</h3>
         <button type="button" class="modal-close-btn" data-close-modal aria-label="Закрыть окно">
           ✕
         </button>
       </div>
 
       <div class="modal-body">
-        <h2 class="modal-title" id="fullPriceModalTitle" style="margin-bottom:6px">
-          Сводный Прайс-Лист: Гофрированные и Дренажные Трубы
-        </h2>
-        <p class="modal-subtitle" style="margin-bottom:20px">
-          Нажмите на любую позицию в таблице, чтобы открыть её подробное попап-окно.
-        </p>
+        <form id="kpOrderForm" class="kp-popup-form">
+          <div class="form-field">
+            <label class="form-label" for="kpName">Ваше имя</label>
+            <input type="text" class="form-input" id="kpName" placeholder="Введите ваше имя или компанию" required />
+          </div>
 
-        <div class="full-price-tables-grid" id="fullPriceTablesContainer"></div>
+          <div class="form-field">
+            <label class="form-label" for="kpPhone">Телефон</label>
+            <input type="tel" class="form-input" id="kpPhone" placeholder="+7 (7__) ___-__-__" required />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="kpComment">Краткий комментарий</label>
+            <textarea class="form-input kp-textarea" id="kpComment" rows="3" placeholder="Укажите интересующий диаметр или вопрос"></textarea>
+          </div>
+
+          <button type="submit" class="solid-btn kp-submit-btn">
+            Отправить заявку
+          </button>
+
+          <div class="order-status" id="kpOrderStatus" role="status"></div>
+        </form>
+
+        <!-- Contact Buttons Row Under Form: WhatsApp, Почта, Позвонить -->
+        <div class="kp-contact-divider">
+          <span>или свяжитесь с нами напрямую</span>
+        </div>
+
+        <div class="kp-contact-actions">
+          <a href="https://wa.me/77000000000" target="_blank" rel="noopener noreferrer" class="kp-contact-btn kp-whatsapp">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+
+          <a href="mailto:info@summus.kz" class="kp-contact-btn kp-email">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <span>Почта</span>
+          </a>
+
+          <a href="tel:+77000000000" class="kp-contact-btn kp-call">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>Позвонить</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

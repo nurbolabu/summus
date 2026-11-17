@@ -148,21 +148,52 @@ function fmtKZT(n) {
 
 const state = {
   activeFilter: 'all', // 'all' | 'sn8' | 'drainage' | 'fittings'
-  modalItemKey: 'sn8-315',
-  modalMeters: 30,
-  bom: [
-    { uid: 'sn8-200', series: 'sn8', od: 200, metersRequested: 60 },
-    { uid: 'drainage-160', series: 'drainage', od: 160, metersRequested: 36 }
-  ]
+  modalItemKey: 'sn8-315'
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initScrollPipeDividers();
+  initMobileDrawer();
   initCatalogCards();
   initModals();
-  initCalculatorAndOrder();
 });
+
+function initMobileDrawer() {
+  const openBtn = document.getElementById('burgerOpenBtn');
+  const closeBtn = document.getElementById('burgerCloseBtn');
+  const backdrop = document.getElementById('mobileDrawerBackdrop');
+  if (!openBtn || !backdrop) return;
+
+  function openDrawer() {
+    backdrop.hidden = false;
+    openBtn.setAttribute('aria-expanded', 'true');
+    requestAnimationFrame(() => {
+      backdrop.classList.add('is-open');
+      document.body.classList.add('modal-open');
+    });
+  }
+
+  function closeDrawer() {
+    backdrop.classList.remove('is-open');
+    openBtn.setAttribute('aria-expanded', 'false');
+    setTimeout(() => {
+      if (!backdrop.classList.contains('is-open')) backdrop.hidden = true;
+    }, 250);
+    if (!document.querySelector('.modal-backdrop.is-open')) {
+      document.body.classList.remove('modal-open');
+    }
+  }
+
+  openBtn.addEventListener('click', openDrawer);
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  backdrop.addEventListener('click', (e) => {
+    if (e.target === backdrop) closeDrawer();
+  });
+  backdrop.querySelectorAll('[data-drawer-link]').forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+}
 
 function initScrollPipeDividers() {
   const fullDividers = document.querySelectorAll('.pipe-divider-full');
@@ -238,7 +269,7 @@ function buildPipeCrossSectionSvg(item, size = 100) {
     <svg viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="${dPath}" fill="#141820"/>
       <circle cx="${cx}" cy="${cy}" r="${(innerR + 1.8).toFixed(1)}" fill="#F8FAFC" stroke="#2B95EA" stroke-width="${Math.max(3.5, size * 0.04).toFixed(1)}"/>
-      <text x="${cx}" y="${cy + 3.5}" text-anchor="middle" fill="#11151C" font-family="JetBrains Mono, monospace" font-size="${Math.round(size * 0.12)}" font-weight="800">${item.series === 'fittings' ? 'SN8' : 'Ø' + od}</text>
+      <text x="${cx}" y="${cy + 3.5}" text-anchor="middle" fill="#11151C" font-family="Manrope, sans-serif" font-size="${Math.round(size * 0.12)}" font-weight="700">${item.series === 'fittings' ? 'SN8' : 'Ø' + od}</text>
     </svg>
   `;
 }
@@ -342,27 +373,18 @@ function renderProductCardsGrid() {
   });
 }
 
-function appendFittingToOrderForm(fitName) {
-  const commentEl = document.getElementById('orderComment');
-  if (commentEl) {
-    commentEl.value = (commentEl.value ? commentEl.value + '\n' : '') + `+ Комплектующие: ${fitName}`;
-  }
-  document.getElementById('orderPanel').scrollIntoView({ behavior: 'smooth' });
-  showToast(`«${fitName}» добавлен в форму заявки`);
-}
-
 /* ==========================================================================
-   4. Popup Modals («Подробнее» Product Modal & Full Price Sheet Modal)
+   4. Popup Modals («Подробнее» Product Modal & «Заказать КП» Modal)
    ========================================================================== */
 function initModals() {
   const prodModal = document.getElementById('productDetailModal');
-  const priceModal = document.getElementById('fullPriceModal');
+  const kpModal = document.getElementById('kpOrderModal');
 
   document.querySelectorAll('[data-close-modal]').forEach(btn => {
     btn.addEventListener('click', closeAllModals);
   });
 
-  [prodModal, priceModal].forEach(modal => {
+  [prodModal, kpModal].forEach(modal => {
     if (!modal) return;
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeAllModals();
@@ -370,53 +392,53 @@ function initModals() {
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeAllModals();
+    if (e.key === 'Escape') {
+      closeAllModals();
+      const drawerBackdrop = document.getElementById('mobileDrawerBackdrop');
+      if (drawerBackdrop && drawerBackdrop.classList.contains('is-open')) {
+        drawerBackdrop.classList.remove('is-open');
+        setTimeout(() => { drawerBackdrop.hidden = true; }, 250);
+      }
+    }
   });
 
-  const minusBtn = document.getElementById('modalQtyMinus');
-  const plusBtn = document.getElementById('modalQtyPlus');
-  const qtyInput = document.getElementById('modalMetersInput');
-
-  if (minusBtn && plusBtn && qtyInput) {
-    minusBtn.addEventListener('click', () => {
-      state.modalMeters = Math.max(6, (Number(qtyInput.value) || 6) - 6);
-      qtyInput.value = state.modalMeters;
-      updateModalCalculation();
-    });
-    plusBtn.addEventListener('click', () => {
-      state.modalMeters = Math.max(6, (Number(qtyInput.value) || 6) + 6);
-      qtyInput.value = state.modalMeters;
-      updateModalCalculation();
-    });
-    qtyInput.addEventListener('input', () => {
-      state.modalMeters = Math.max(6, Number(qtyInput.value) || 6);
-      updateModalCalculation();
-    });
-  }
-
-  const modalInstantBtn = document.getElementById('modalInstantOrderBtn');
-
-  if (modalInstantBtn) {
-    modalInstantBtn.addEventListener('click', () => {
-      const item = findCatalogItemByKey(state.modalItemKey);
-      const prodSel = document.getElementById('calcProductSelect');
-      const metersEl = document.getElementById('calcMeters');
-      if (item.series !== 'fittings' && prodSel && metersEl) {
-        prodSel.value = item.key;
-        metersEl.value = state.modalMeters;
-        prodSel.dispatchEvent(new Event('change'));
+  document.querySelectorAll('[data-open-kp-modal]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const drawerBackdrop = document.getElementById('mobileDrawerBackdrop');
+      if (drawerBackdrop && drawerBackdrop.classList.contains('is-open')) {
+        drawerBackdrop.classList.remove('is-open');
+        setTimeout(() => { drawerBackdrop.hidden = true; }, 250);
       }
-      closeAllModals();
-      const orderSec = document.getElementById('orderSection') || document.getElementById('orderPanel');
-      if (orderSec) orderSec.scrollIntoView({ behavior: 'smooth' });
-      showToast(`Выбрано для КП: ${item.name || ('Труба Ø' + item.od + ' мм')}`);
+      openKpOrderModal('');
+    });
+  });
+
+  const modalOpenKpBtn = document.getElementById('modalOpenKpBtn');
+  if (modalOpenKpBtn) {
+    modalOpenKpBtn.addEventListener('click', () => {
+      const item = findCatalogItemByKey(state.modalItemKey);
+      const label = item.series === 'fittings'
+        ? `${item.name} (${item.diams})`
+        : (item.series === 'sn8' ? `Гофрированная труба SN 8 Ø ${item.od}/${item.id} мм` : `Дренажная труба Ø ${item.od} мм (L–6 м)`);
+      openKpOrderModal(`Интересует: ${label}`);
     });
   }
 
-  const openPriceBtn = document.getElementById('openFullPriceModalBtn');
-  if (openPriceBtn) openPriceBtn.addEventListener('click', openFullPriceModal);
-
-  renderFullPriceSheetModalContent();
+  const kpForm = document.getElementById('kpOrderForm');
+  if (kpForm) {
+    kpForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('kpName').value.trim();
+      const phone = document.getElementById('kpPhone').value.trim();
+      if (!name || !phone) return;
+      const status = document.getElementById('kpOrderStatus');
+      if (status) {
+        status.textContent = `Спасибо, ${name}! Заявка принята, свяжемся с вами по номеру ${phone}.`;
+        status.classList.add('is-visible');
+      }
+      showToast('Заявка успешно отправлена');
+    });
+  }
 }
 
 function openProductModal(itemKey) {
@@ -432,14 +454,25 @@ function openProductModal(itemKey) {
   });
 }
 
-function openFullPriceModal() {
-  const modal = document.getElementById('fullPriceModal');
+function openKpOrderModal(prefillText = '') {
+  closeAllModals();
+  const modal = document.getElementById('kpOrderModal');
   if (!modal) return;
-  modal.hidden = false;
-  requestAnimationFrame(() => {
-    modal.classList.add('is-open');
-    document.body.classList.add('modal-open');
-  });
+
+  const commentEl = document.getElementById('kpComment');
+  const statusEl = document.getElementById('kpOrderStatus');
+  if (statusEl) statusEl.classList.remove('is-visible');
+  if (commentEl && prefillText) {
+    commentEl.value = prefillText;
+  }
+
+  setTimeout(() => {
+    modal.hidden = false;
+    requestAnimationFrame(() => {
+      modal.classList.add('is-open');
+      document.body.classList.add('modal-open');
+    });
+  }, 60);
 }
 
 function closeAllModals() {
@@ -462,7 +495,6 @@ function populateProductModal() {
     <span class="vat-pill">Цена с НДС 16% • Завод SUMMUS</span>
   `;
 
-  // Render realistic studio photo + corner CAD cross-section badge inside modal stage
   const cadStage = document.querySelector('.modal-cad-stage');
   if (cadStage) {
     cadStage.innerHTML = `
@@ -495,7 +527,6 @@ function populateProductModal() {
   const subEl = document.getElementById('modalProductSubtitle');
   const priceBox = document.getElementById('modalPriceHighlight');
   const specsList = document.getElementById('modalSpecsList');
-  const qtyField = document.querySelector('.modal-order-controls');
 
   if (item.series === 'fittings') {
     document.getElementById('modalCadLabel').textContent = 'СТУДИЙНОЕ ФОТО И СХЕМА';
@@ -503,11 +534,10 @@ function populateProductModal() {
     titleEl.textContent = item.name;
     subEl.textContent = item.spec;
     priceBox.style.display = 'none';
-    if (qtyField) qtyField.style.display = 'none';
 
     specsList.innerHTML = `
-      <div class="spec-row"><span>Артикул серии</span><strong class="mono">${item.code}</strong></div>
-      <div class="spec-row"><span>Совместимые диаметры труб</span><strong class="mono">${item.diams}</strong></div>
+      <div class="spec-row"><span>Артикул серии</span><strong>${item.code}</strong></div>
+      <div class="spec-row"><span>Совместимые диаметры труб</span><strong>${item.diams}</strong></div>
       <div class="spec-row"><span>Материал корпуса</span><strong>Полиэтилен высокой плотности (PE-HD)</strong></div>
       <div class="spec-row"><span>Класс кольцевой жесткости</span><strong>SN 8 (≥ 8 кН/м²)</strong></div>
       <div class="spec-row"><span>Комплектация к трубам SN 8</span><strong>${item.jointLabel}</strong></div>
@@ -517,7 +547,6 @@ function populateProductModal() {
   }
 
   priceBox.style.display = 'flex';
-  if (qtyField) qtyField.style.display = 'flex';
 
   const isSn8 = item.series === 'sn8';
   const wallHeight = ((item.od - item.id) / 2).toFixed(1);
@@ -534,195 +563,16 @@ function populateProductModal() {
   document.getElementById('modalPricePerSeg').textContent = fmtKZT(item.priceM * 6);
 
   specsList.innerHTML = `
-    <div class="spec-row"><span>Наружный диаметр (OD)</span><strong class="mono">${item.od} мм</strong></div>
-    <div class="spec-row"><span>Внутренний диаметр (ID)</span><strong class="mono">${item.id} мм</strong></div>
-    <div class="spec-row"><span>Высота профиля волны</span><strong class="mono">${wallHeight} мм</strong></div>
+    <div class="spec-row"><span>Наружный диаметр (OD)</span><strong>${item.od} мм</strong></div>
+    <div class="spec-row"><span>Внутренний диаметр (ID)</span><strong>${item.id} мм</strong></div>
+    <div class="spec-row"><span>Высота профиля волны</span><strong>${wallHeight} мм</strong></div>
     <div class="spec-row"><span>Класс кольцевой жесткости</span><strong>SN 8 (≥ 8 кН/м²)</strong></div>
-    <div class="spec-row"><span>Длина одного отрезка</span><strong class="mono">L = 6 000 мм (6 м)</strong></div>
+    <div class="spec-row"><span>Длина одного отрезка</span><strong>L = 6 000 мм (6 м)</strong></div>
     <div class="spec-row"><span>Тип соединения и комплектация</span><strong>${isSn8 ? 'В комплекте 1 муфта и 2 уплотнительных кольца' : 'Перфорированная с синей полосой (L–6 м)'}</strong></div>
     <div class="spec-row"><span>Материал</span><strong>Первичный полиэтилен PE-HD (ПНД)</strong></div>
     <div class="spec-row"><span>Рекомендуемая глубина заложения</span><strong>${item.depth}</strong></div>
     <div class="spec-row"><span>Срок эксплуатации</span><strong>Не менее 50 лет</strong></div>
   `;
-
-  updateModalCalculation();
-}
-
-function updateModalCalculation() {
-  const item = findCatalogItemByKey(state.modalItemKey);
-  if (!item || item.series === 'fittings') return;
-
-  const segs = Math.ceil(Math.max(6, state.modalMeters) / 6);
-  const meters = segs * 6;
-  state.modalMeters = meters;
-
-  const sum = meters * item.priceM;
-  const segEl = document.getElementById('modalCalcSegs');
-  const sumEl = document.getElementById('modalCalcSum');
-  if (segEl) segEl.textContent = `${segs} отр. × 6 м = ${meters} м`;
-  if (sumEl) sumEl.textContent = fmtKZT(sum);
-}
-
-function renderFullPriceSheetModalContent() {
-  const container = document.getElementById('fullPriceTablesContainer');
-  if (!container) return;
-
-  const sn8Rows = PIPE_CATALOG.sn8.items.map(it => `
-    <tr data-sheet-open="${it.key}">
-      <td class="mono" style="font-weight:800">${it.joint === 'bell' ? `${it.od}/${it.id} раструб` : `${it.od}/${it.id}`}</td>
-      <td>${it.jointLabel}</td>
-      <td class="mono" style="font-weight:800;color:var(--pipe-blue-deep)">${fmtKZT(it.priceM)}</td>
-      <td class="mono">${fmtKZT(it.priceM * 6)}</td>
-    </tr>
-  `).join('');
-
-  const drainRows = PIPE_CATALOG.drainage.items.map(it => `
-    <tr data-sheet-open="${it.key}">
-      <td class="mono" style="font-weight:800">Ø ${it.od} мм</td>
-      <td>п/м • L–6 м</td>
-      <td class="mono" style="font-weight:800;color:var(--pipe-blue-deep)">${fmtKZT(it.priceM)}</td>
-      <td class="mono">${fmtKZT(it.priceM * 6)}</td>
-    </tr>
-  `).join('');
-
-  container.innerHTML = `
-    <div class="price-sheet-card">
-      <div class="price-sheet-head">
-        <h3>Гофрированные трубы SN 8</h3>
-        <span>В комплекте 1 муфта + 2 кольца</span>
-      </div>
-      <table class="sheet-table">
-        <thead>
-          <tr>
-            <th>Наружный / Внутр. Ø, мм</th>
-            <th>Соединение</th>
-            <th>За 1 м (с НДС 16%)</th>
-            <th>Отрезок 6 м</th>
-          </tr>
-        </thead>
-        <tbody>${sn8Rows}</tbody>
-      </table>
-    </div>
-
-    <div class="price-sheet-card">
-      <div class="price-sheet-head">
-        <h3>Дренажные трубы (L–6 м)</h3>
-        <span>Перфорированные с синей полосой</span>
-      </div>
-      <table class="sheet-table">
-        <thead>
-          <tr>
-            <th>Диаметр, мм</th>
-            <th>Ед. изм.</th>
-            <th>За 1 м (с НДС 16%)</th>
-            <th>Отрезок 6 м</th>
-          </tr>
-        </thead>
-        <tbody>${drainRows}</tbody>
-      </table>
-    </div>
-  `;
-
-  container.querySelectorAll('[data-sheet-open]').forEach(row => {
-    row.addEventListener('click', () => {
-      const key = row.getAttribute('data-sheet-open');
-      closeAllModals();
-      setTimeout(() => openProductModal(key), 240);
-    });
-  });
-}
-
-/* ==========================================================================
-   5. Minimalist KP Calculator & Order Form
-   ========================================================================== */
-function initCalculatorAndOrder() {
-  const prodSel = document.getElementById('calcProductSelect');
-  const metersInput = document.getElementById('calcMeters');
-  const minusBtn = document.getElementById('calcMinusBtn');
-  const plusBtn = document.getElementById('calcPlusBtn');
-  const orderForm = document.getElementById('orderForm');
-
-  if (!prodSel || !metersInput) return;
-
-  function populateProducts() {
-    const sn8Opts = PIPE_CATALOG.sn8.items.map(it => {
-      const jointText = it.joint === 'bell' ? 'раструб' : 'муфта + 2 кольца';
-      return `<option value="${it.key}" ${it.od === 200 ? 'selected' : ''}>Труба SN 8 Ø ${it.od}/${it.id} мм — ${fmtKZT(it.priceM)}/м (${jointText})</option>`;
-    }).join('');
-
-    const drainOpts = PIPE_CATALOG.drainage.items.map(it => {
-      return `<option value="${it.key}">Дренажная труба Ø ${it.od} мм — ${fmtKZT(it.priceM)}/м (L–6 м)</option>`;
-    }).join('');
-
-    prodSel.innerHTML = `
-      <optgroup label="Гофрированные двухслойные трубы SN 8">
-        ${sn8Opts}
-      </optgroup>
-      <optgroup label="Дренажные перфорированные трубы (L–6 м)">
-        ${drainOpts}
-      </optgroup>
-    `;
-    updatePreview();
-  }
-
-  function updatePreview() {
-    const key = prodSel.value;
-    const item = findCatalogItemByKey(key);
-    const rawM = Math.max(6, Number(metersInput.value) || 6);
-    const segs = Math.ceil(rawM / 6);
-    const meters = segs * 6;
-    const sum = meters * item.priceM;
-
-    const segEl = document.getElementById('previewSegments');
-    const kitEl = document.getElementById('previewKit');
-    const totEl = document.getElementById('previewTotal');
-
-    if (segEl) segEl.textContent = `${segs} отр. × 6 м (${meters} п/м)`;
-    if (kitEl) {
-      kitEl.textContent = item.series === 'sn8'
-        ? (item.joint === 'bell' ? `В комплекте: ${segs} раструбов + ${segs * 2} колец` : `В комплекте: ${segs} муфт + ${segs * 2} уплотнительных колец`)
-        : `Дренажная перфорированная труба с синей полосой (${segs} шт × 6 м)`;
-    }
-    if (totEl) totEl.textContent = fmtKZT(sum);
-  }
-
-  prodSel.addEventListener('change', updatePreview);
-  metersInput.addEventListener('input', updatePreview);
-
-  if (minusBtn) {
-    minusBtn.addEventListener('click', () => {
-      const cur = Math.max(6, Number(metersInput.value) || 6);
-      metersInput.value = Math.max(6, cur - 6);
-      updatePreview();
-    });
-  }
-
-  if (plusBtn) {
-    plusBtn.addEventListener('click', () => {
-      const cur = Math.max(6, Number(metersInput.value) || 6);
-      metersInput.value = cur + 6;
-      updatePreview();
-    });
-  }
-
-  if (orderForm) {
-    orderForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('orderName').value.trim();
-      const phone = document.getElementById('orderPhone').value.trim();
-      if (!name || !phone) return;
-      const item = findCatalogItemByKey(prodSel.value);
-      const segs = Math.ceil(Math.max(6, Number(metersInput.value) || 6) / 6);
-      const meters = segs * 6;
-      const sum = fmtKZT(meters * item.priceM);
-      const status = document.getElementById('orderStatus');
-      status.textContent = `Спасибо, ${name}! Расчет КП на ${meters} м (${sum} с НДС 16%) передан в отдел продаж SUMMUS. Свяжемся с вами по номеру ${phone}.`;
-      status.classList.add('is-visible');
-      showToast('Заявка на КП успешно отправлена');
-    });
-  }
-
-  populateProducts();
 }
 
 let toastTimer = null;
