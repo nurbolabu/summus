@@ -13,14 +13,14 @@ const PIPE_CATALOG = {
     stiffnessLabel: 'SN 8 (≥ 8 кН/м²)',
     description: 'Двухслойная гофрированная труба из полиэтилена высокой плотности PE 100 (ГОСТ Р 54475-2011) с черным наружным профилированным слоем и гладким голубым внутренним слоем. Поставляется в отрезках по 6 метров в комплекте с 1 муфтой и 2 уплотнительными кольцами.',
     items: [
-      { key: 'sn8-110', series: 'sn8', od: 110, id: 91,  joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 1050,  depth: 'до 8 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn8-160', series: 'sn8', od: 160, id: 139, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 1955,  depth: 'до 8 м', photo: './assets/pipe-sn8.jpg' },
-      { key: 'sn8-200', series: 'sn8', od: 200, id: 176, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 2935,  depth: 'до 8 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn8-250', series: 'sn8', od: 250, id: 216, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 4200,  depth: 'до 8 м', photo: './assets/pipe-sn8.jpg' },
-      { key: 'sn8-315', series: 'sn8', od: 315, id: 271, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 6600,  depth: 'до 8 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn8-400', series: 'sn8', od: 400, id: 343, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 9900,  depth: 'до 8 м', photo: './assets/hero-pipes.jpg' },
-      { key: 'sn8-500', series: 'sn8', od: 500, id: 431, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 13780, depth: 'до 8 м', photo: './assets/card-sn8-bell.jpg' },
-      { key: 'sn8-630', series: 'sn8', od: 630, id: 541, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 26380, depth: 'до 8 м', photo: './assets/card-sn8-bell.jpg' }
+      { key: 'sn8-110', series: 'sn8', od: 110, id: 91,  joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 1050,  depth: 'до 8 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn8-160', series: 'sn8', od: 160, id: 139, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 1955,  depth: 'до 8 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn8-200', series: 'sn8', od: 200, id: 176, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 2935,  depth: 'до 8 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn8-250', series: 'sn8', od: 250, id: 216, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 4200,  depth: 'до 8 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn8-315', series: 'sn8', od: 315, id: 271, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 6600,  depth: 'до 8 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn8-400', series: 'sn8', od: 400, id: 343, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 9900,  depth: 'до 8 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn8-500', series: 'sn8', od: 500, id: 431, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 13780, depth: 'до 8 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn8-630', series: 'sn8', od: 630, id: 541, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 26380, depth: 'до 8 м', photo: './assets/pipe-corrugated-main.jpg' }
     ]
   },
 
@@ -33,14 +33,14 @@ const PIPE_CATALOG = {
     stiffnessLabel: 'SN 10 (≥ 10 кН/м²)',
     description: 'Усиленная двухслойная гофрированная труба класса кольцевой жесткости SN 10 (ГОСТ Р 54475-2011) для прокладки на участках с повышенной грунтовой и транспортной нагрузкой. Отрезки L = 6 м в комплекте с муфтой и 2 кольцами EPDM.',
     items: [
-      { key: 'sn10-110', series: 'sn10', od: 110, id: 91,  joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 1180,  depth: 'до 10 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn10-160', series: 'sn10', od: 160, id: 139, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 2190,  depth: 'до 10 м', photo: './assets/pipe-sn8.jpg' },
-      { key: 'sn10-200', series: 'sn10', od: 200, id: 176, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 3290,  depth: 'до 10 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn10-250', series: 'sn10', od: 250, id: 216, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 4700,  depth: 'до 10 м', photo: './assets/pipe-sn8.jpg' },
-      { key: 'sn10-315', series: 'sn10', od: 315, id: 271, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 7390,  depth: 'до 10 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn10-400', series: 'sn10', od: 400, id: 343, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 11090, depth: 'до 10 м', photo: './assets/hero-pipes.jpg' },
-      { key: 'sn10-500', series: 'sn10', od: 500, id: 431, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 15430, depth: 'до 10 м', photo: './assets/card-sn8-bell.jpg' },
-      { key: 'sn10-630', series: 'sn10', od: 630, id: 541, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 29550, depth: 'до 10 м', photo: './assets/card-sn8-bell.jpg' }
+      { key: 'sn10-110', series: 'sn10', od: 110, id: 91,  joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 1180,  depth: 'до 10 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn10-160', series: 'sn10', od: 160, id: 139, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 2190,  depth: 'до 10 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn10-200', series: 'sn10', od: 200, id: 176, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 3290,  depth: 'до 10 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn10-250', series: 'sn10', od: 250, id: 216, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 4700,  depth: 'до 10 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn10-315', series: 'sn10', od: 315, id: 271, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 7390,  depth: 'до 10 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn10-400', series: 'sn10', od: 400, id: 343, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 11090, depth: 'до 10 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn10-500', series: 'sn10', od: 500, id: 431, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 15430, depth: 'до 10 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn10-630', series: 'sn10', od: 630, id: 541, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 29550, depth: 'до 10 м', photo: './assets/pipe-corrugated-main.jpg' }
     ]
   },
 
@@ -53,14 +53,14 @@ const PIPE_CATALOG = {
     stiffnessLabel: 'SN 12 (≥ 12 кН/м²)',
     description: 'Двухслойная гофрированная труба тяжелого класса жесткости SN 12 (ГОСТ Р 54475-2011) из первичного полиэтилена PE 100 для автомагистралей, промышленных зон и глубокого заложения до 12 м.',
     items: [
-      { key: 'sn12-110', series: 'sn12', od: 110, id: 91,  joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 1310,  depth: 'до 12 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn12-160', series: 'sn12', od: 160, id: 139, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 2440,  depth: 'до 12 м', photo: './assets/pipe-sn8.jpg' },
-      { key: 'sn12-200', series: 'sn12', od: 200, id: 176, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 3670,  depth: 'до 12 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn12-250', series: 'sn12', od: 250, id: 216, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 5250,  depth: 'до 12 м', photo: './assets/pipe-sn8.jpg' },
-      { key: 'sn12-315', series: 'sn12', od: 315, id: 271, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 8250,  depth: 'до 12 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn12-400', series: 'sn12', od: 400, id: 343, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 12380, depth: 'до 12 м', photo: './assets/hero-pipes.jpg' },
-      { key: 'sn12-500', series: 'sn12', od: 500, id: 431, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 17220, depth: 'до 12 м', photo: './assets/card-sn8-bell.jpg' },
-      { key: 'sn12-630', series: 'sn12', od: 630, id: 541, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 32970, depth: 'до 12 м', photo: './assets/card-sn8-bell.jpg' }
+      { key: 'sn12-110', series: 'sn12', od: 110, id: 91,  joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 1310,  depth: 'до 12 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn12-160', series: 'sn12', od: 160, id: 139, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 2440,  depth: 'до 12 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn12-200', series: 'sn12', od: 200, id: 176, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 3670,  depth: 'до 12 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn12-250', series: 'sn12', od: 250, id: 216, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 5250,  depth: 'до 12 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn12-315', series: 'sn12', od: 315, id: 271, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 8250,  depth: 'до 12 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn12-400', series: 'sn12', od: 400, id: 343, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 12380, depth: 'до 12 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn12-500', series: 'sn12', od: 500, id: 431, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 17220, depth: 'до 12 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn12-630', series: 'sn12', od: 630, id: 541, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 32970, depth: 'до 12 м', photo: './assets/pipe-corrugated-main.jpg' }
     ]
   },
 
@@ -73,14 +73,14 @@ const PIPE_CATALOG = {
     stiffnessLabel: 'SN 16 (≥ 16 кН/м²)',
     description: 'Сверхпрочная двухслойная гофрированная труба максимального класса кольцевой жесткости SN 16 (ГОСТ Р 54475-2011) для особо ответственных объектов, аэропортов, железных дорог и глубин заложения до 16 м.',
     items: [
-      { key: 'sn16-110', series: 'sn16', od: 110, id: 91,  joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 1490,  depth: 'до 16 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn16-160', series: 'sn16', od: 160, id: 139, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 2780,  depth: 'до 16 м', photo: './assets/pipe-sn8.jpg' },
-      { key: 'sn16-200', series: 'sn16', od: 200, id: 176, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 4170,  depth: 'до 16 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn16-250', series: 'sn16', od: 250, id: 216, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 5960,  depth: 'до 16 м', photo: './assets/pipe-sn8.jpg' },
-      { key: 'sn16-315', series: 'sn16', od: 315, id: 271, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 9370,  depth: 'до 16 м', photo: './assets/card-sn8-coupling.jpg' },
-      { key: 'sn16-400', series: 'sn16', od: 400, id: 343, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 14060, depth: 'до 16 м', photo: './assets/hero-pipes.jpg' },
-      { key: 'sn16-500', series: 'sn16', od: 500, id: 431, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 19570, depth: 'до 16 м', photo: './assets/card-sn8-bell.jpg' },
-      { key: 'sn16-630', series: 'sn16', od: 630, id: 541, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 37460, depth: 'до 16 м', photo: './assets/card-sn8-bell.jpg' }
+      { key: 'sn16-110', series: 'sn16', od: 110, id: 91,  joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 1490,  depth: 'до 16 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn16-160', series: 'sn16', od: 160, id: 139, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 2780,  depth: 'до 16 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn16-200', series: 'sn16', od: 200, id: 176, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 4170,  depth: 'до 16 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn16-250', series: 'sn16', od: 250, id: 216, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 5960,  depth: 'до 16 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn16-315', series: 'sn16', od: 315, id: 271, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 9370,  depth: 'до 16 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn16-400', series: 'sn16', od: 400, id: 343, joint: 'coupling', jointLabel: 'Муфта + 2 кольца', priceM: 14060, depth: 'до 16 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn16-500', series: 'sn16', od: 500, id: 431, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 19570, depth: 'до 16 м', photo: './assets/pipe-corrugated-main.jpg' },
+      { key: 'sn16-630', series: 'sn16', od: 630, id: 541, joint: 'bell',     jointLabel: 'Раструб + 2 кольца', priceM: 37460, depth: 'до 16 м', photo: './assets/pipe-corrugated-main.jpg' }
     ]
   },
 
