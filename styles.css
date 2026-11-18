@@ -168,14 +168,14 @@ button, input, select, textarea {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .header-phone-link {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 8px 14px;
+  padding: 8px 13px;
   border-radius: 999px;
   background: var(--bg-subtle);
   font-size: 13.5px;
@@ -194,26 +194,67 @@ button, input, select, textarea {
   color: var(--pipe-blue-deep);
 }
 
-.header-wa-btn {
+.header-wa-circle {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0B65C6 0%, #073B7A 100%);
+  border: 1px solid rgba(75, 163, 227, 0.55);
+  box-shadow: 0 6px 14px rgba(11, 101, 198, 0.25);
+  flex-shrink: 0;
+  transition: transform 0.22s var(--ease-out), box-shadow 0.22s ease;
+}
+
+.header-wa-circle:hover {
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: 0 9px 20px rgba(11, 101, 198, 0.36);
+}
+
+.wa-icon-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.pill-cta {
   padding: 9px 18px;
   border-radius: 999px;
   font-size: 13.5px;
   font-weight: 700;
-  background: linear-gradient(135deg, #1E78BE 0%, #0D4B85 100%);
+  background: var(--ink-charcoal);
   color: #FFFFFF;
-  border: 1px solid rgba(75, 163, 227, 0.55);
-  box-shadow: 0 6px 16px rgba(30, 120, 190, 0.24);
+  border: 1.5px solid var(--pipe-blue);
   cursor: pointer;
   transition: all 0.22s var(--ease-out);
   white-space: nowrap;
 }
 
-.header-wa-btn:hover {
+.pill-cta:hover {
+  background: var(--pipe-blue-deep);
   transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(30, 120, 190, 0.34);
+}
+
+.kp-wa-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0B65C6 0%, #073B7A 100%);
+}
+
+.kp-wa-badge .wa-icon-img {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-wa-icon {
+  background: linear-gradient(135deg, #0B65C6 0%, #073B7A 100%);
 }
 
 .burger-btn {
