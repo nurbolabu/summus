@@ -388,7 +388,7 @@ button, input, select, textarea {
    1. Centered Hero Monument: SUMMUS Pipe Logo & Factory Subtitle
    ========================================================================== */
 .hero-monument {
-  padding: 28px 0 34px;
+  padding: 28px 0 0;
   text-align: center;
   background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFC 100%);
 }
@@ -420,27 +420,27 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   3D Physical Corrugated Pipe Horizontal Dividers (From Client Mockup)
+   3D Physical Corrugated Pipe Horizontal Dividers (Uniform 48px Vertical Spacing)
    ========================================================================== */
 .pipe-divider-full {
   width: 100%;
-  height: 56px;
+  height: 44px;
   background-image: url('./assets/pipe-divider-tile.png');
   background-repeat: repeat-x;
   background-position: center center;
-  background-size: auto 56px;
-  margin: 6px 0 38px;
+  background-size: auto 44px;
+  margin: 48px 0;
   will-change: background-position;
-  transition: filter 0.3s ease;
 }
 
-/* Split Pipe Divider with Centered Heading ("Каталог") */
+/* Split Pipe Divider with Centered Uppercase Heading ("КАТАЛОГ") */
 .pipe-divider-split {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 56px 0 38px;
+  height: 44px;
+  margin: 48px 0;
   gap: 0;
 }
 
@@ -448,16 +448,16 @@ button, input, select, textarea {
   flex: 1;
   display: flex;
   align-items: center;
-  height: 56px;
+  height: 44px;
   min-width: 60px;
 }
 
 .pipe-arm-body {
   flex: 1;
-  height: 56px;
+  height: 44px;
   background-image: url('./assets/pipe-divider-tile.png');
   background-repeat: repeat-x;
-  background-size: auto 56px;
+  background-size: auto 44px;
 }
 
 .pipe-arm-left .pipe-arm-body {
@@ -469,8 +469,8 @@ button, input, select, textarea {
 }
 
 .pipe-arm-cap {
-  width: 65px;
-  height: 56px;
+  width: 72px;
+  height: 44px;
   object-fit: fill;
   flex-shrink: 0;
 }
@@ -484,20 +484,26 @@ button, input, select, textarea {
 }
 
 .split-heading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
   padding: 0 32px;
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: 40px;
+  line-height: 1;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--ink-black);
   white-space: nowrap;
-  transform: translateY(-3px);
+  margin: 0;
 }
 
 /* ==========================================================================
    2. Section: «Ключевые Преимущества и Услуги» (3x2 Realistic Studio Cards)
    ========================================================================== */
 .advantages-section {
-  padding-top: 12px;
+  padding: 0;
 }
 
 .section-heading-center {
@@ -696,11 +702,11 @@ button, input, select, textarea {
    Unified Catalog Cards Grid (Every Pipe Diameter & Fitting as a Card)
    ========================================================================== */
 .catalog-section {
-  padding-bottom: 56px;
+  padding: 0;
 }
 
 .catalog-cards-block {
-  padding-top: 8px;
+  padding-top: 0;
 }
 
 .spec-toolbar {
@@ -1718,7 +1724,7 @@ button, input, select, textarea {
    4. Section: «Сертификаты Соответствия»
    ========================================================================== */
 .certificates-section {
-  padding: 12px 0 54px;
+  padding: 0;
 }
 
 .certs-grid {
@@ -1875,7 +1881,7 @@ button, input, select, textarea {
    5. Branded Studio Footer with Contacts, Application Form & Logo
    ========================================================================== */
 .studio-footer {
-  padding: 24px 0 118px;
+  padding: 0 0 118px;
   background: linear-gradient(180deg, var(--bg-page) 0%, #EFF3F8 100%);
 }
 
@@ -2198,7 +2204,7 @@ button, input, select, textarea {
 
   /* Hero Section on Mobile */
   .hero-monument {
-    padding: 18px 0 22px;
+    padding: 18px 0 0;
   }
 
   .hero-logo-stage {
@@ -2212,33 +2218,36 @@ button, input, select, textarea {
     padding: 0 8px;
   }
 
-  /* 3D Pipe Dividers on Mobile */
+  /* 3D Pipe Dividers on Mobile (Uniform 32px Vertical Spacing) */
   .pipe-divider-full {
-    height: 36px;
-    background-size: auto 36px;
-    margin: 4px 0 26px;
+    height: 32px;
+    background-size: auto 32px;
+    margin: 32px 0;
   }
 
   .pipe-divider-split {
-    margin: 24px 0 22px;
+    height: 32px;
+    margin: 32px 0;
   }
 
   .pipe-arm,
   .pipe-arm-body,
   .pipe-arm-cap {
-    height: 36px;
-    background-size: auto 36px;
+    height: 32px;
+    background-size: auto 32px;
     min-width: 32px;
   }
 
   .pipe-arm-cap {
-    width: 42px;
+    width: 52px;
   }
 
   .split-heading {
+    height: 32px;
     padding: 0 14px;
-    font-size: 21px;
-    transform: translateY(-2px);
+    font-size: 28px;
+    line-height: 1;
+    transform: none;
   }
 
   .section-heading-center {
