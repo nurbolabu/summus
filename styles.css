@@ -2015,14 +2015,13 @@ button, input, select, textarea {
 
 .floating-consult-pill {
   pointer-events: auto;
-  width: 385px;
+  width: 380px;
   max-width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 10px 8px 20px;
-  background: rgba(255, 255, 255, 0.86);
+  justify-content: center;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(18px) saturate(170%);
   -webkit-backdrop-filter: blur(18px) saturate(170%);
   border: 1px solid rgba(75, 163, 227, 0.38);
@@ -2032,51 +2031,25 @@ button, input, select, textarea {
     0 3px 10px rgba(75, 163, 227, 0.12);
 }
 
-.consult-text-trigger {
-  border: none;
-  background: transparent;
-  text-align: left;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  padding: 0;
-}
-
-.consult-title {
-  font-size: 13.5px;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--pipe-blue-deep);
-  line-height: 1.15;
-}
-
-.consult-sub {
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--ink-black);
-  line-height: 1.2;
-}
-
 .consult-wa-btn {
+  width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 10px 20px;
+  gap: 10px;
+  padding: 12px 24px;
   border-radius: 999px;
   background: linear-gradient(135deg, #0B65C6 0%, #073B7A 100%);
   color: #FFFFFF;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   box-shadow: 0 6px 16px rgba(11, 101, 198, 0.28);
   transition: transform 0.22s var(--ease-out), box-shadow 0.22s ease;
   white-space: nowrap;
 }
 
 .consult-wa-btn:hover {
-  transform: translateY(-1px) scale(1.02);
+  transform: translateY(-1px) scale(1.01);
   box-shadow: 0 10px 22px rgba(11, 101, 198, 0.38);
 }
 
@@ -2164,10 +2137,10 @@ button, input, select, textarea {
     height: 22px;
   }
 
-  /* Floating Bottom Consultation Pill matches Mobile Header Pill Width & Height */
+  /* Floating Bottom WhatsApp Pill matches Mobile Header Pill Width & Height */
   .floating-consult-pill {
     width: 100%;
-    padding: 8px 10px 8px 18px;
+    padding: 5px;
   }
 }
 
@@ -2189,17 +2162,9 @@ button, input, select, textarea {
     padding: 0 14px;
   }
 
-  .consult-title {
-    font-size: 12.5px;
-  }
-
-  .consult-sub {
-    font-size: 12px;
-  }
-
   .consult-wa-btn {
-    padding: 8px 16px;
-    font-size: 13px;
+    padding: 11px 20px;
+    font-size: 14px;
   }
 
   /* Hero Section on Mobile */
