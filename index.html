@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SUMMUS — Завод гофрированных труб и фитингов</title>
-  <meta name="description" content="SUMMUS — Завод гофрированных труб и фитингов. Двухслойные трубы SN 8, перфорированные дренажные трубы Ø 110–630 мм и комплектующие. Городской склад, самовывоз, ЭДО и доставка." />
+  <meta name="description" content="SUMMUS — Завод гофрированных труб и фитингов. Двухслойные трубы SN 8, SN 10, SN 12, SN 16, дренажные трубы Ø 110–630 мм и фитинги. Городской склад, самовывоз, ЭДО и доставка." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23181C22'/%3E%3Ccircle cx='32' cy='32' r='19' fill='%23F9FAFC' stroke='%234BA3E3' stroke-width='6'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +14,9 @@
 </head>
 <body>
 
-  <!-- Header Menu with SUMMUS Logo, Desktop Links, CTA & Mobile Burger Button -->
+  <!-- =====================================================================
+       Header Menu: SUMMUS Logo + Nav Links + Phone +7 777 700 30 00 + WhatsApp
+       ===================================================================== -->
   <div class="top-nav-wrap">
     <div class="container">
       <div class="top-nav-pill">
@@ -23,15 +25,31 @@
         </a>
 
         <nav class="header-nav-links" aria-label="Основная навигация">
+          <a href="#catalog" class="pill-link is-active">Каталог</a>
           <a href="#advantages" class="pill-link">Преимущества</a>
-          <a href="#catalog" class="pill-link">Каталог</a>
-          <a href="#catalogCardsAnchor" class="pill-link">Товары</a>
+          <a href="#certificates" class="pill-link">Сертификаты</a>
+          <a href="#contacts" class="pill-link">Контакты</a>
         </nav>
 
         <div class="header-actions">
-          <button type="button" class="pill-cta desktop-cta" data-open-kp-modal>
-            Заказать КП
-          </button>
+          <a href="tel:+77777003000" class="header-phone-link">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>+7 777 700 30 00</span>
+          </a>
+
+          <a
+            href="https://wa.me/77777003000"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="header-wa-btn desktop-cta"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
 
           <button
             type="button"
@@ -60,15 +78,24 @@
       </div>
 
       <nav class="mobile-drawer-nav">
-        <a href="#advantages" class="drawer-link" data-drawer-link>Преимущества</a>
-        <a href="#catalog" class="drawer-link" data-drawer-link>Каталог</a>
-        <a href="#catalogCardsAnchor" class="drawer-link" data-drawer-link>Товары</a>
+        <a href="#catalog" class="drawer-link" data-drawer-link>Каталог товаров</a>
+        <a href="#advantages" class="drawer-link" data-drawer-link>Ключевые преимущества</a>
+        <a href="#certificates" class="drawer-link" data-drawer-link>Сертификаты</a>
+        <a href="#contacts" class="drawer-link" data-drawer-link>Контакты и заявка</a>
       </nav>
 
       <div class="mobile-drawer-bottom">
-        <button type="button" class="solid-btn drawer-kp-btn" data-open-kp-modal>
-          Заказать КП
-        </button>
+        <a href="tel:+77777003000" class="drawer-phone-row">
+          +7 777 700 30 00
+        </a>
+        <div class="drawer-btn-stack">
+          <a href="https://wa.me/77777003000" target="_blank" rel="noopener noreferrer" class="solid-btn drawer-wa-link">
+            Написать в WhatsApp
+          </a>
+          <button type="button" class="outline-btn drawer-kp-btn" data-open-kp-modal>
+            Заказать КП
+          </button>
+        </div>
       </div>
     </aside>
   </div>
@@ -92,77 +119,6 @@
       </div>
     </header>
 
-    <!-- Full-Width 3D Horizontal Corrugated Pipe Divider -->
-    <div class="pipe-divider-full" aria-hidden="true"></div>
-
-    <!-- ===================================================================
-         2. Section: «Ключевые Преимущества и Услуги»
-            3x2 Studio White Cards Grid with Realistic Studio Photographs
-         =================================================================== -->
-    <section id="advantages" class="advantages-section">
-      <div class="container">
-        <h2 class="section-heading-center reveal">
-          Ключевые Преимущества и Услуги
-        </h2>
-
-        <div class="advantages-grid">
-          <!-- Card 1: Широкий Ассортимент Труб -->
-          <article class="adv-card reveal">
-            <div class="adv-photo-wrap">
-              <img src="./assets/adv-real-1-assortment.jpg" alt="Широкий ассортимент гофрированных труб" loading="lazy" />
-            </div>
-            <h3 class="adv-title">Широкий<br/>Ассортимент Труб</h3>
-            <p class="adv-sub">Канализационные и дренажные<br/>трубы Ø 110–1000 мм</p>
-          </article>
-
-          <!-- Card 2: Городской Склад и Самовывоз -->
-          <article class="adv-card reveal">
-            <div class="adv-photo-wrap">
-              <img src="./assets/adv-theme-warehouse.jpg" alt="Городской склад и самовывоз" loading="lazy" />
-            </div>
-            <h3 class="adv-title">Городской Склад<br/>и Самовывоз</h3>
-            <p class="adv-sub">Постоянный запас в наличии<br/>и быстрая погрузка</p>
-          </article>
-
-          <!-- Card 3: Оперативная Доставка -->
-          <article class="adv-card reveal">
-            <div class="adv-photo-wrap">
-              <img src="./assets/adv-theme-delivery.jpg" alt="Оперативная доставка грузовым транспортом" loading="lazy" />
-            </div>
-            <h3 class="adv-title">Оперативная<br/>Доставка</h3>
-            <p class="adv-sub">Доставка спецтранспортом<br/>на объекты по Казахстану</p>
-          </article>
-
-          <!-- Card 4: Полная Комплектация Фитингами -->
-          <article class="adv-card reveal">
-            <div class="adv-photo-wrap">
-              <img src="./assets/adv-real-4-fittings.jpg" alt="Полная комплектация фитингами и отводами" loading="lazy" />
-            </div>
-            <h3 class="adv-title">Полная Комплектация<br/>Фитингами</h3>
-            <p class="adv-sub">Муфты, отводы, тройники,<br/>крестовины и переходы</p>
-          </article>
-
-          <!-- Card 5: Электронный Документооборот (ЭДО) -->
-          <article class="adv-card reveal">
-            <div class="adv-photo-wrap">
-              <img src="./assets/adv-theme-edo.jpg" alt="Электронный документооборот ЭДО и договоры" loading="lazy" />
-            </div>
-            <h3 class="adv-title">Электронный<br/>Документооборот (ЭДО)</h3>
-            <p class="adv-sub">Официальный договор, ЭСФ<br/>и гибкая отсрочка оплаты</p>
-          </article>
-
-          <!-- Card 6: Гарантия Качества Производителя -->
-          <article class="adv-card reveal">
-            <div class="adv-photo-wrap">
-              <img src="./assets/adv-theme-quality.jpg" alt="Гарантия качества производителя" loading="lazy" />
-            </div>
-            <h3 class="adv-title">Гарантия Качества<br/>Производителя</h3>
-            <p class="adv-sub">Заводской контроль жесткости<br/>SN 8 и соответствие ГОСТ</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- ===================================================================
          Split 3D Corrugated Pipe Divider with Centered «Каталог»
          =================================================================== -->
@@ -181,58 +137,32 @@
     </div>
 
     <!-- ===================================================================
-         3. Section: «Каталог»
-            Main Studio Category Cards + Full-Width Category Tabs + Product Grid
+         2. Section: «Каталог товаров»
+            Starts Immediately with Tabs Divided by Stiffness Class:
+            SN 8 • SN 10 • SN 12 • SN 16 • Дренажные • Фитинги
          =================================================================== -->
     <section class="catalog-section">
       <div class="container">
-        <!-- Two Main Studio Category Cards -->
-        <div class="catalog-showcase-grid">
-          <!-- Left Card: ГОФРИРОВАННЫЕ ТРУБЫ -->
-          <article class="cat-showcase-card reveal">
-            <div class="cat-showcase-media" data-open-series-modal="sn8">
-              <img
-                src="./assets/catalog-pipes-coils.jpg"
-                alt="Гофрированные трубы SUMMUS"
-              />
-            </div>
-            <h3 class="cat-showcase-title">ГОФРИРОВАННЫЕ ТРУБЫ</h3>
-            <button type="button" class="pipe-cta-btn" data-open-series-modal="sn8">
-              <span>ПЕРЕЙТИ В КАТАЛОГ</span>
-            </button>
-          </article>
-
-          <!-- Right Card: ФИТИНГИ К НИМ -->
-          <article class="cat-showcase-card reveal">
-            <div class="cat-showcase-media" data-open-series-modal="fittings">
-              <img
-                src="./assets/catalog-fittings-group.jpg"
-                alt="Фитинги к гофрированным трубам SUMMUS"
-              />
-            </div>
-            <h3 class="cat-showcase-title">ФИТИНГИ К НИМ</h3>
-            <button type="button" class="pipe-cta-btn" data-open-series-modal="fittings">
-              <span>ПЕРЕЙТИ В КАТАЛОГ</span>
-            </button>
-          </article>
-        </div>
-
-        <!-- Catalog Product Cards Block -->
         <div class="catalog-cards-block" id="catalogCardsAnchor">
-          <!-- Full-Width Category Tabs matching the 2-column grid container width -->
           <div class="spec-toolbar reveal">
-            <div class="tab-group" role="tablist" aria-label="Разделы каталога">
-              <button type="button" class="tab-btn is-active" data-cat-filter="all">
-                Все позиции (22)
+            <div class="tab-group" role="tablist" aria-label="Классы прочности и разделы каталога">
+              <button type="button" class="tab-btn is-active" data-cat-filter="sn8">
+                Трубы SN 8
               </button>
-              <button type="button" class="tab-btn" data-cat-filter="sn8">
-                Гофрированные трубы SN 8 (8)
+              <button type="button" class="tab-btn" data-cat-filter="sn10">
+                Трубы SN 10
+              </button>
+              <button type="button" class="tab-btn" data-cat-filter="sn12">
+                Трубы SN 12
+              </button>
+              <button type="button" class="tab-btn" data-cat-filter="sn16">
+                Трубы SN 16
               </button>
               <button type="button" class="tab-btn" data-cat-filter="drainage">
-                Дренажные трубы L–6 м (8)
+                Дренажные трубы
               </button>
               <button type="button" class="tab-btn" data-cat-filter="fittings">
-                Фитинги к ним (6)
+                Фитинги
               </button>
             </div>
           </div>
@@ -242,14 +172,260 @@
         </div>
       </div>
     </section>
+
+    <!-- Full-Width 3D Horizontal Corrugated Pipe Divider -->
+    <div class="pipe-divider-full" aria-hidden="true"></div>
+
+    <!-- ===================================================================
+         3. Section: «Ключевые Преимущества и Услуги»
+            3x2 Studio White Cards Grid with Realistic Studio Photographs
+         =================================================================== -->
+    <section id="advantages" class="advantages-section">
+      <div class="container">
+        <h2 class="section-heading-center reveal">
+          Ключевые Преимущества и Услуги
+        </h2>
+
+        <div class="advantages-grid">
+          <!-- Card 1: Широкий Ассортимент Труб (Letter S from SUMMUS Pipe Logo) -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-real-1-assortment.jpg" alt="Широкий ассортимент гофрированных труб" loading="lazy" />
+            </div>
+            <h3 class="adv-title">Широкий<br/>Ассортимент Труб</h3>
+            <p class="adv-sub">Канализационные и дренажные<br/>трубы SN 8 – SN 16 (Ø 110–630 мм)</p>
+          </article>
+
+          <!-- Card 2: Городской Склад и Самовывоз (Palletized Pipes Close-Up) -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-theme-warehouse.jpg" alt="Городской склад и самовывоз" loading="lazy" />
+            </div>
+            <h3 class="adv-title">Городской Склад<br/>и Самовывоз</h3>
+            <p class="adv-sub">Крупный запас труб на паллетах<br/>и быстрая отгрузка</p>
+          </article>
+
+          <!-- Card 3: Оперативная Доставка -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-theme-delivery.jpg" alt="Оперативная доставка грузовым транспортом" loading="lazy" />
+            </div>
+            <h3 class="adv-title">Оперативная<br/>Доставка</h3>
+            <p class="adv-sub">Доставка спецтранспортом<br/>на объекты по Казахстану</p>
+          </article>
+
+          <!-- Card 4: Полная Комплектация Фитингами (Real Black & Blue Fittings) -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-real-4-fittings.jpg" alt="Полная комплектация фитингами и отводами" loading="lazy" />
+            </div>
+            <h3 class="adv-title">Полная Комплектация<br/>Фитингами</h3>
+            <p class="adv-sub">Тройники, косые отводы 45°/90°,<br/>муфты и кольца EPDM</p>
+          </article>
+
+          <!-- Card 5: Электронный Документооборот (ЭДО) -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-theme-edo.jpg" alt="Электронный документооборот ЭДО и договоры" loading="lazy" />
+            </div>
+            <h3 class="adv-title">Электронный<br/>Документооборот (ЭДО)</h3>
+            <p class="adv-sub">Официальный договор, ЭСФ<br/>и гибкая отсрочка оплаты</p>
+          </article>
+
+          <!-- Card 6: Гарантия Качества Производителя -->
+          <article class="adv-card reveal">
+            <div class="adv-photo-wrap">
+              <img src="./assets/adv-theme-quality.jpg" alt="Гарантия качества производителя" loading="lazy" />
+            </div>
+            <h3 class="adv-title">Гарантия Качества<br/>Производителя</h3>
+            <p class="adv-sub">Заводской контроль жесткости<br/>SN 8 – SN 16 по ГОСТ Р 54475-2011</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-Width 3D Horizontal Corrugated Pipe Divider -->
+    <div class="pipe-divider-full" aria-hidden="true"></div>
+
+    <!-- ===================================================================
+         4. Section: «Сертификаты Соответствия»
+         =================================================================== -->
+    <section id="certificates" class="certificates-section">
+      <div class="container">
+        <h2 class="section-heading-center reveal">
+          Сертификаты Соответствия
+        </h2>
+        <p class="section-sub-center reveal">
+          Вся продукция сертифицирована в Государственной системе технического регулирования Республики Казахстан (ГОСТ Р 54475-2011 • PE 100 • SN 8, SN 10, SN 12, SN 16)
+        </p>
+
+        <div class="certs-grid">
+          <!-- Certificate 1: Russian Version -->
+          <article class="cert-card reveal">
+            <div class="cert-preview-wrap" data-open-cert="./assets/cert-ru.jpg" data-cert-title="Сертификат соответствия № KZ.7500317.01.01.02412 (RU)">
+              <img src="./assets/cert-ru.jpg" alt="Сертификат соответствия ГОСТ Р 54475-2011 на русском языке" loading="lazy" />
+              <span class="cert-zoom-badge">Нажмите для увеличения</span>
+            </div>
+            <div class="cert-info">
+              <span class="cert-tag">Госстандарт РК • RU</span>
+              <h3 class="cert-title">Сертификат соответствия № KZ.7500317.01.01.02412</h3>
+              <p class="cert-desc">
+                Трубы полиэтиленовые PE 100 (SN 8, SN 10, SN 12, SN 16) со структурированной гофрированной стенкой и фасонные части Ø 110–630 мм.
+              </p>
+              <div class="cert-actions">
+                <button type="button" class="btn-card-more" data-open-cert="./assets/cert-ru.jpg" data-cert-title="Сертификат соответствия № KZ.7500317.01.01.02412 (RU)">
+                  Смотреть сертификат
+                </button>
+                <a href="./assets/cert-ru.pdf" target="_blank" rel="noopener noreferrer" class="cert-pdf-link">
+                  Скачать PDF
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certificate 2: Kazakh Version -->
+          <article class="cert-card reveal">
+            <div class="cert-preview-wrap" data-open-cert="./assets/cert-kz.jpg" data-cert-title="Сәйкестік сертификаты № KZ.7500317.01.01.02412 (KZ)">
+              <img src="./assets/cert-kz.jpg" alt="Сәйкестік сертификаты ГОСТ Р 54475-2011 на казахском языке" loading="lazy" />
+              <span class="cert-zoom-badge">Нажмите для увеличения</span>
+            </div>
+            <div class="cert-info">
+              <span class="cert-tag">Мемстандарт ҚР • KZ</span>
+              <h3 class="cert-title">Сәйкестік сертификаты № KZ.7500317.01.01.02412</h3>
+              <p class="cert-desc">
+                Құрылымдық (гофрленген) қабырғасы бар PE 100, SN 8, SN 10, SN 12, SN 16 полиэтиленді құбырлар және фасонды бөлшектер Ø 110–630 мм.
+              </p>
+              <div class="cert-actions">
+                <button type="button" class="btn-card-more" data-open-cert="./assets/cert-kz.jpg" data-cert-title="Сәйкестік сертификаты № KZ.7500317.01.01.02412 (KZ)">
+                  Смотреть сертификат
+                </button>
+                <a href="./assets/cert-kz.pdf" target="_blank" rel="noopener noreferrer" class="cert-pdf-link">
+                  Скачать PDF
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-Width 3D Horizontal Corrugated Pipe Divider -->
+    <div class="pipe-divider-full" aria-hidden="true"></div>
   </main>
 
-  <footer class="studio-footer">
+  <!-- =====================================================================
+       5. Branded Studio Footer with Contacts, Application Form & Logo
+       ===================================================================== -->
+  <footer id="contacts" class="studio-footer">
     <div class="container">
-      <img src="./assets/logo-summus-transparent.png" alt="SUMMUS" />
-      <p><strong>SUMMUS</strong> — Завод гофрированных труб и фитингов. Все права защищены.</p>
+      <div class="footer-grid">
+        <!-- Left Column: Brand Logo, Description & Direct Contact Cards -->
+        <div class="footer-brand-col">
+          <img src="./assets/logo-summus-transparent.png" alt="SUMMUS" class="footer-logo" />
+          <p class="footer-tagline">
+            Завод гофрированных труб и фитингов из полиэтилена высокой плотности PE 100 (SN 8 • SN 10 • SN 12 • SN 16). Прямые поставки со склада и производство под заказ.
+          </p>
+
+          <div class="footer-contact-cards">
+            <a href="tel:+77777003000" class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="footer-contact-lbl">Телефон отдела продаж</span>
+                <strong class="footer-contact-val">+7 777 700 30 00</strong>
+              </div>
+            </a>
+
+            <a href="https://wa.me/77777003000" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="footer-contact-lbl">WhatsApp (консультация и КП)</span>
+                <strong class="footer-contact-val">+7 777 700 30 00</strong>
+              </div>
+            </a>
+
+            <a href="mailto:info@summus.kz" class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div>
+                <span class="footer-contact-lbl">Электронная почта</span>
+                <strong class="footer-contact-val">info@summus.kz</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Embedded Studio Order / Consultation Form -->
+        <div class="footer-form-card">
+          <h3>Оставить заявку на КП</h3>
+          <p>Заполните форму — подготовим расчет стоимости партии с НДС 16% и свяжемся с вами</p>
+
+          <form id="footerOrderForm" class="kp-popup-form">
+            <div class="form-field">
+              <label class="form-label" for="footerName">Ваше имя</label>
+              <input type="text" class="form-input" id="footerName" placeholder="Введите ваше имя или компанию" required />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="footerPhone">Телефон / WhatsApp</label>
+              <input type="tel" class="form-input" id="footerPhone" placeholder="+7 (7__) ___-__-__" required />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="footerComment">Краткий комментарий</label>
+              <textarea class="form-input kp-textarea" id="footerComment" rows="3" placeholder="Укажите нужный класс жесткости (SN 8–SN 16), диаметр или метраж"></textarea>
+            </div>
+
+            <button type="submit" class="solid-btn kp-submit-btn">
+              Отправить заявку
+            </button>
+
+            <div class="order-status" id="footerOrderStatus" role="status"></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 <strong>SUMMUS</strong> — Завод гофрированных труб и фитингов. Все права защищены.</p>
+      </div>
     </div>
   </footer>
+
+  <!-- =====================================================================
+       Floating Bottom Consultation & WhatsApp Pill (360-400px on Desktop,
+       Same Size as Header Pill on Mobile, Translucent Glass & Brand Colors)
+       ===================================================================== -->
+  <div class="floating-consult-wrap">
+    <div class="floating-consult-pill">
+      <button type="button" class="consult-text-trigger" data-open-kp-modal>
+        <span class="consult-title">КОНСУЛЬТАЦИЯ</span>
+        <span class="consult-sub">Напишите нам</span>
+      </button>
+
+      <a
+        href="https://wa.me/77777003000"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="consult-wa-btn"
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
 
   <!-- =====================================================================
        POPUP MODAL 1: Detailed Product Inspector («Подробнее»)
@@ -272,7 +448,7 @@
                 <svg id="modalCadSvg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg"></svg>
               </div>
               <div class="modal-cad-caption">
-                Наружный гофрированный слой PE-HD (черный) • Внутренний гладкий слой (голубой)
+                Наружный гофрированный слой PE 100 (черный) • Внутренний гладкий слой (голубой)
               </div>
             </div>
 
@@ -319,12 +495,12 @@
   </div>
 
   <!-- =====================================================================
-       POPUP MODAL 2: «Заказать КП» (3 Input Rows + WhatsApp / Email / Call Icons)
+       POPUP MODAL 2: «Заказать КП / Консультация» (3 Input Rows + Contact Icons)
        ===================================================================== -->
   <div class="modal-backdrop" id="kpOrderModal" role="dialog" aria-modal="true" aria-labelledby="kpModalTitle" hidden>
     <div class="modal-window modal-window-kp">
       <div class="modal-header">
-        <h3 class="kp-modal-heading" id="kpModalTitle">Заказать КП</h3>
+        <h3 class="kp-modal-heading" id="kpModalTitle">Заказать КП / Консультация</h3>
         <button type="button" class="modal-close-btn" data-close-modal aria-label="Закрыть окно">
           ✕
         </button>
@@ -360,7 +536,7 @@
         </div>
 
         <div class="kp-contact-actions">
-          <a href="https://wa.me/77000000000" target="_blank" rel="noopener noreferrer" class="kp-contact-btn kp-whatsapp">
+          <a href="https://wa.me/77777003000" target="_blank" rel="noopener noreferrer" class="kp-contact-btn kp-whatsapp">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
             </svg>
@@ -375,13 +551,30 @@
             <span>Почта</span>
           </a>
 
-          <a href="tel:+77000000000" class="kp-contact-btn kp-call">
+          <a href="tel:+77777003000" class="kp-contact-btn kp-call">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
             <span>Позвонить</span>
           </a>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       POPUP MODAL 3: Full-Screen Certificate Lightbox
+       ===================================================================== -->
+  <div class="modal-backdrop" id="certLightboxModal" role="dialog" aria-modal="true" aria-labelledby="certLightboxTitle" hidden>
+    <div class="modal-window modal-window-cert">
+      <div class="modal-header">
+        <h3 class="kp-modal-heading" id="certLightboxTitle">Сертификат соответствия</h3>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Закрыть окно">
+          ✕
+        </button>
+      </div>
+      <div class="modal-body cert-lightbox-body">
+        <img src="./assets/cert-ru.jpg" alt="Сертификат соответствия" id="certLightboxImg" />
       </div>
     </div>
   </div>
