@@ -93,14 +93,14 @@ const PIPE_CATALOG = {
     stiffnessLabel: 'SN 8 • Перфорация',
     description: 'Перфорированная двухслойная дренажная труба с заводскими водоприемными прорезями в пазах гофры и синей продольной полосой. Предназначена для глубинного водоотведения и понижения уровня грунтовых вод.',
     items: [
-      { key: 'drain-110', series: 'drainage', od: 110, id: 91,  joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 1500,  depth: 'до 6 м', photo: './assets/card-drain-single.jpg' },
-      { key: 'drain-160', series: 'drainage', od: 160, id: 139, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 2600,  depth: 'до 6 м', photo: './assets/card-drain-stack.jpg' },
-      { key: 'drain-200', series: 'drainage', od: 200, id: 176, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 3800,  depth: 'до 6 м', photo: './assets/card-drain-single.jpg' },
-      { key: 'drain-250', series: 'drainage', od: 250, id: 216, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 4900,  depth: 'до 6 м', photo: './assets/pipe-drainage.jpg' },
-      { key: 'drain-315', series: 'drainage', od: 315, id: 271, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 7200,  depth: 'до 6 м', photo: './assets/card-drain-single.jpg' },
-      { key: 'drain-400', series: 'drainage', od: 400, id: 343, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 11200, depth: 'до 6 м', photo: './assets/card-drain-stack.jpg' },
-      { key: 'drain-500', series: 'drainage', od: 500, id: 431, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 19200, depth: 'до 6 м', photo: './assets/card-drain-single.jpg' },
-      { key: 'drain-630', series: 'drainage', od: 630, id: 541, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 39600, depth: 'до 6 м', photo: './assets/card-drain-stack.jpg' }
+      { key: 'drain-110', series: 'drainage', od: 110, id: 91,  joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 1500,  depth: 'до 6 м', photo: './assets/pipe-drainage-main.jpg' },
+      { key: 'drain-160', series: 'drainage', od: 160, id: 139, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 2600,  depth: 'до 6 м', photo: './assets/pipe-drainage-main.jpg' },
+      { key: 'drain-200', series: 'drainage', od: 200, id: 176, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 3800,  depth: 'до 6 м', photo: './assets/pipe-drainage-main.jpg' },
+      { key: 'drain-250', series: 'drainage', od: 250, id: 216, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 4900,  depth: 'до 6 м', photo: './assets/pipe-drainage-main.jpg' },
+      { key: 'drain-315', series: 'drainage', od: 315, id: 271, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 7200,  depth: 'до 6 м', photo: './assets/pipe-drainage-main.jpg' },
+      { key: 'drain-400', series: 'drainage', od: 400, id: 343, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 11200, depth: 'до 6 м', photo: './assets/pipe-drainage-main.jpg' },
+      { key: 'drain-500', series: 'drainage', od: 500, id: 431, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 19200, depth: 'до 6 м', photo: './assets/pipe-drainage-main.jpg' },
+      { key: 'drain-630', series: 'drainage', od: 630, id: 541, joint: 'drain', jointLabel: 'Перфорация • L–6 м', priceM: 39600, depth: 'до 6 м', photo: './assets/pipe-drainage-main.jpg' }
     ]
   },
 
